@@ -17,15 +17,15 @@ class IngredientsSeeder extends Seeder
     {
         DB::table('ingredients')->insert([
             'name' => 'meat',
-            'products_id' => 1,
+            
         ]);
         DB::table('ingredients')->insert([
             'name' => 'patatoes',
-            'products_id' => 2,
+         
         ]);
         DB::table('ingredients')->insert([
             'name' => 'fish',
-            'products_id' => 3,
+           
         ]);
        
     }

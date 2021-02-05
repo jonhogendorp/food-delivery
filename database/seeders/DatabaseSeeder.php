@@ -20,7 +20,6 @@ class DatabaseSeeder extends Seeder
             RestaurantsSeeder::class,
             ProductsSeeder::class,
             IngredientsSeeder::class,
-            
             OrdersSeeder::class,
             ]);
     }
