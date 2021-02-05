@@ -17,21 +17,19 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('food_type_id');
-            $table->unsignedBigInteger('restaurant_id');
-
+            $table->unsignedBigInteger('restaurant_id')->nullable();
             $table->string('food_name');
             $table->enum('size', ['large', 'medium', 'small']);
             $table->decimal('price', );
-
             $table->timestamps();
-
-            $table->foreign('restaurant_id')
-            ->references('id')
-            ->on('restaurants');
 
             $table->foreign('food_type_id')
             ->references('id')
             ->on('food_types');
+
+            $table->foreign('restaurant_id')
+            ->references('id')
+            ->on('restaurants');
         });
     }
 
