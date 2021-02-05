@@ -17,6 +17,7 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('food_type_id') ->nullable();
+            $table->unsignedBigInteger('ingredients_type_id') ->nullable();
             $table->unsignedBigInteger('restaurant_id')->nullable();
             $table->string('food_name');
             $table->enum('size', ['large', 'medium', 'small']);
@@ -26,6 +27,10 @@ class CreateProductsTable extends Migration
             $table->foreign('food_type_id')
             ->references('id')
             ->on('food_types');
+
+            $table->foreign('ingredients_type_id')
+            ->references('id')
+            ->on('ingredients');
 
             $table->foreign('restaurant_id')
             ->references('id')

@@ -18,8 +18,8 @@ class DatabaseSeeder extends Seeder
             Food_typeSeeder::class,
             Restaurant_typesSeeder::class,
             RestaurantsSeeder::class,
-            ProductsSeeder::class,
             IngredientsSeeder::class,
+            ProductsSeeder::class,
             OrdersSeeder::class,
             ]);
     }
