@@ -18,6 +18,14 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/home', function () {
+    return view('home');
+});
+
+Route::get('/index', function () {
+    return view('home');
+});
+
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('search', 'App\Http\Controllers\SearchController@index')->name('searchresults');

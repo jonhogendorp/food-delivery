@@ -24,6 +24,11 @@ class Restaurant_typesSeeder extends Seeder
 
         DB::table('restaurant_types')->insert([
             'name' => 'Fish',
+            'name' => 'Local',
+        ]);
+
+        DB::table('restaurant_types')->insert([
+            'name' => 'Sea food',
         ]);
     }
 }
