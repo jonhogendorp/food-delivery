@@ -15,7 +15,7 @@ class Food_typesSeeder extends Seeder
     public function run()
     {
         DB::table('food_types')->insert([
-            'name' => 'Exotic',
+            'name' => 'Hippo',
         ]);
 
         DB::table('food_types')->insert([

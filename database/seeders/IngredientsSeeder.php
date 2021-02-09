@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
 
-class Ingredients extends Seeder
+class IngredientsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
