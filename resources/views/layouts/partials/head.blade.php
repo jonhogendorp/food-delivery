@@ -27,7 +27,7 @@
 
   <!-- Template Main CSS File -->
 
-  <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
+  <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
   <!-- =======================================================
   * Template Name: Restaurantly - v1.2.1
   * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/

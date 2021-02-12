@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class Food_typesSeeder extends Seeder
+class Food_typeSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -19,11 +19,11 @@ class Food_typesSeeder extends Seeder
         ]);
 
         DB::table('food_types')->insert([
-            'name' => 'Dutch',
+            'name' => 'Local',
         ]);
 
         DB::table('food_types')->insert([
-            'name' => 'Fish',
+            'name' => 'Sea Food',
         ]);
     }
 }

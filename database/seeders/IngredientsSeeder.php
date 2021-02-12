@@ -16,16 +16,17 @@ class IngredientsSeeder extends Seeder
     public function run()
     {
         DB::table('ingredients')->insert([
-            'name' => 'cheese',
+            'name' => 'meat',
+            
         ]);
         DB::table('ingredients')->insert([
-            'name' => 'tomato sauce',
+            'name' => 'patatoes',
+         
         ]);
         DB::table('ingredients')->insert([
-            'name' => 'salami',
+            'name' => 'fish',
+           
         ]);
-        DB::table('ingredients')->insert([
-            'name' => 'ham',
-        ]);
+       
     }
 }

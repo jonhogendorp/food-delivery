@@ -16,18 +16,21 @@ class ProductsSeeder extends Seeder
     public function run()
     {
         DB::table('products')->insert([
+            
             'food_name' => 'pizza',
             'size' => 'large',
             'price' => 7.50,
 
         ]);
         DB::table('products')->insert([
+           
             'food_name' => 'hamburger',
             'size' => 'large',
             'price' => 5.50,
 
         ]);
         DB::table('products')->insert([
+       
             'food_name' => 'spaghetti',
             'size' => 'large',
             'price' => 6.50,

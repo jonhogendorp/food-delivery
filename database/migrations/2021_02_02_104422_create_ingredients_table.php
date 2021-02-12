@@ -19,10 +19,6 @@ class CreateIngredientsTable extends Migration
             $table->string('name');
             $table->timestamps();
 
-            //foreignkey
-            $table->foreign('products_id')
-            ->references('id')
-            ->on('products');
         });
     }
 
