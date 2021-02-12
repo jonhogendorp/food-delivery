@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('city', 80);
             $table->string('phone', 15);
             $table->string('postal_code');
-            $table->string('house_number');
+            $table->string('house_number')->nullable();
             $table->string('house_number_addition')->nullable();
             $table->timestamp('email_verified_at')->nullable();
 
