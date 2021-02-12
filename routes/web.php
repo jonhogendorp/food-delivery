@@ -21,11 +21,18 @@ use Illuminate\Support\Facades\Auth;
 // Route::get('/', '\App\Http\Controllers\HomeController@index');
 
 
-//  Auth::routes();
+ Auth::routes();
+
+
+ Route::get('/', function () {
+    return view('home');
+});
+
 
  Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
  Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index'])->name('contact');
  Route::get('/restaurant', [App\Http\Controllers\RestaurantController::class, 'show'])->name('restaurant');
+ Route::post('search', 'App\Http\Controllers\AreaController@index')->name('searchresults');
 //  Route::get('/restaurant', [App\Http\Controllers\RestaurantController::class, 'show'])->name('restaurant');
 
 
