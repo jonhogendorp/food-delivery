@@ -13,7 +13,7 @@ class CreateRestaurantTypeTable extends Migration
      */
     public function up()
     {
-        Schema::create('restaurant_type', function (Blueprint $table) {
+        Schema::create('restaurant_types', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });

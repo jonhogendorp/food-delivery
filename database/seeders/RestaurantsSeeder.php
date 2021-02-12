@@ -16,7 +16,7 @@ class RestaurantsSeeder extends Seeder
     {
         DB::table('restaurants')->insert([
             'restaurant_name' => 'The Hungry Hippo',
-            'restaurant_types_id' => 1,
+            'restaurant_type_id' => 1,
             'email' => 'hungry@hippo.nl',
             'street' => 'Dorpstraat',
             'house_number' => 2,
@@ -29,7 +29,7 @@ class RestaurantsSeeder extends Seeder
 
         DB::table('restaurants')->insert([
             'restaurant_name' => 'International House of Stampot',
-            'restaurant_types_id' => 2,
+            'restaurant_type_id' => 2,
             'email' => 'iho@stamppot.nl',
             'street' => 'Dorpstraat',
             'house_number' => 4,
@@ -42,7 +42,7 @@ class RestaurantsSeeder extends Seeder
 
         DB::table('restaurants')->insert([
             'restaurant_name' => 'Finding Nemo Fish & Chips',
-            'restaurant_types_id' => 3,
+            'restaurant_type_id' => 3,
             'email' => 'finding@nemo.nl',
             'street' => 'Dorpstraat',
             'house_number' => 6,

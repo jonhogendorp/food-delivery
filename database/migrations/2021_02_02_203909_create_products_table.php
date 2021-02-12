@@ -28,9 +28,9 @@ class CreateProductsTable extends Migration
             ->references('id')
             ->on('food_types');
 
-            $table->foreign('ingredients_type_id')
-            ->references('id')
-            ->on('ingredients');
+            // $table->foreign('ingredients_type_id')
+            // ->references('id')
+            // ->on('ingredients');
 
             $table->foreign('restaurant_id')
             ->references('id')

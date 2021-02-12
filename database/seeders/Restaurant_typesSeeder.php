@@ -14,15 +14,15 @@ class Restaurant_typesSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('restaurant_types')->insert([
+        DB::table('restaurant_type')->insert([
             'name' => 'Exotic',
         ]);
 
-        DB::table('restaurant_types')->insert([
+        DB::table('restaurant_type')->insert([
             'name' => 'Local',
         ]);
 
-        DB::table('restaurant_types')->insert([
+        DB::table('restaurant_type')->insert([
             'name' => 'Sea food',
         ]);
     }
