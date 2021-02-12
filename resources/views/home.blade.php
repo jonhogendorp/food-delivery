@@ -12,8 +12,9 @@
           <form method="post" action="{{route('searchresults')}}" class="customerPostalCode" id="customerPostalCode" name="customerPostalCode">
             @csrf
             <div>
-            <input type="text" class="customerPostalCode" name="customerPostalCode" id="customerPostalCode" value="9712AX">
+            <input type="text" class="customerPostalCode" name="customerPostalCode" id="customerPostalCode" value="9712AX" required>
             <button class="button is-link" type="submit">Submit</button>
+            <p>{{$errors->first('customerPostalCode')}}</p>
             </div>
           </form>
         </div>

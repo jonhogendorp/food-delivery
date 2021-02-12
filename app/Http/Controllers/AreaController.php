@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Area;
 use App\Models\Restaurant;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Axlon\PostalCodeValidation\Rules\PostalCode;
 
 class AreaController extends Controller
 {
@@ -13,6 +14,9 @@ class AreaController extends Controller
     
     public function index(Request $request)
     {
+        $this->validatePostalCode();
+
+
         $customerPostalCode = strtolower($request->input('customerPostalCode'));
     
         $customerRegion = substr($customerPostalCode,0,2);
@@ -29,5 +33,13 @@ class AreaController extends Controller
             
 
     }
+    protected function validatePostalCode()
+        {
+            return request()->validate([
+                'customerPostalCode' => 'required',
+                'customerPostalCode' => [PostalCode::for('NL')]
+                       
+                ]);
+        }
 }
 
