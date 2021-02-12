@@ -7,24 +7,32 @@
   <div class="container" data-aos="fade-up">
 
     <div class="section-title">
-      <h2>Results for</h2>
-      <p><h1>Results for {{$customerPostalCodeComplete}}</h1></p>
+      <h2>Restaurants in your Area</h2>
+      <p><h3>{{$customerPostalCode}}</h3></p>
     </div>
 
     <div class="row">
-
-      <div class="col-lg-12">
-        <div class="box" data-aos="zoom-in" data-aos-delay="100">
-          <span>01</span>
-          <h4>Title</h4>
-          <p>about restaurant</p>
-         
+      
+      @forelse ($results as $result)
+      
+        <div class="col-lg-12">
+          <div class="box" data-aos="zoom-in" data-aos-delay="100">
+            <span>{{$result->restaurant_name}}</span>
+           
+            <p>{{$result->restaurant_type}}</p>
+           
+          </div>
         </div>
-      </div>
-
-     
+        @empty
+          <div class="col-lg-12">
+            <div class="box" data-aos="zoom-in" data-aos-delay="100">
+              <span>No restaurants were found in your area.</span>
+            </div>
+              
+           
+          </div>
+      @endforelse   
     </div>
-
   </div>
 </section><!-- content Section -->
 @endsection

@@ -28,4 +28,4 @@ Route::get('/index', function () {
 
 Auth::routes();
 
-Route::post('search', 'App\Http\Controllers\SearchController@index')->name('searchresults');
+Route::post('search', 'App\Http\Controllers\AreaController@index')->name('searchresults');

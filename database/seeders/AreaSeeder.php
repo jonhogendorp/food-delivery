@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
 
-class RangeSeeder extends Seeder
+class AreaSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,14 +14,14 @@ class RangeSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('range')->insert([
-            'postal_code' => '9701',
+        DB::table('areas')->insert([
+            'area' => '97',
         ]);
-        DB::table('range')->insert([
-            'postal_code' => '9702',
+        DB::table('areas')->insert([
+            'area' => '97',
             ]);
-        DB::table('range')->insert([
-            'postal_code' => '1703',
+        DB::table('areas')->insert([
+            'area' => '17',
         ]);
     }
     

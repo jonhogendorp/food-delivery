@@ -35,6 +35,8 @@ class CreateRestaurantsTable extends Migration
                 ->on('restaurant_types');
 
         });
+
+        
     }
 
     /**

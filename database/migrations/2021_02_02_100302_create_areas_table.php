@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRangeTable extends Migration
+class CreateAreasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,12 @@ class CreateRangeTable extends Migration
      */
     public function up()
     {
-        Schema::create('range', function (Blueprint $table) {
+        Schema::create('areas', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger("postal_code");
-            $table->unsignedBigInteger("restaurant_id")->nullable();
+            $table->string("area");
             $table->timestamps();
 
-            $table->foreign('restaurant_id')
-            ->references('id')
-            ->on('restaurants');
+            
 
         });
     }
@@ -33,6 +30,6 @@ class CreateRangeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('range');
+        Schema::dropIfExists('areas');
     }
 }
