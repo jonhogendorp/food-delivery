@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Area;
 use App\Models\Restaurant;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Axlon\PostalCodeValidation\Rules\PostalCode;
@@ -35,7 +34,7 @@ class AreaController extends Controller
     }
     protected function validatePostalCode()
         {
-            return request()->validate([
+             request()->validate([
                 'customerPostalCode' => 'required',
                 'customerPostalCode' => [PostalCode::for('NL')]
                        
