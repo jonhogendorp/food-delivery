@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
 
-class IngredientsSeeder extends Seeder
+class IngredientSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,16 +17,16 @@ class IngredientsSeeder extends Seeder
     {
         DB::table('ingredients')->insert([
             'name' => 'meat',
-            
+
         ]);
         DB::table('ingredients')->insert([
             'name' => 'patatoes',
-         
+
         ]);
         DB::table('ingredients')->insert([
             'name' => 'fish',
-           
+
         ]);
-       
+
     }
 }

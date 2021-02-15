@@ -17,12 +17,12 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             Food_typeSeeder::class,
             Restaurant_typeSeeder::class,
-            IngredientsSeeder::class,
+            IngredientSeeder::class,
             AreaSeeder::class,
-            OpeningHoursSeeder::class,   
-            ProductsSeeder::class,
-            OrdersSeeder::class,
-            RestaurantsSeeder::class,
+            OpeningHourSeeder::class,
+            ProductSeeder::class,
+            OrderSeeder::class,
+            RestaurantSeeder::class,
             Area_restaurantSeeder::class
             ]);
     }

@@ -28,7 +28,7 @@ class CreateRestaurantsTable extends Migration
 
             $table->foreign('restaurant_type_id')
                 ->references('id')
-                ->on('restaurant_type');
+                ->on('restaurant_types');
 
         });
 
