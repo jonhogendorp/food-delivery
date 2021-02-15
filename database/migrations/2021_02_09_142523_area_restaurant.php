@@ -18,13 +18,12 @@ class AreaRestaurant extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('restaurant_id');
             $table->unsignedBigInteger('area_id');
-
             $table->unique(['restaurant_id', 'area_id']);
 
             $table->foreign('restaurant_id')->references('id')->on('restaurants');
             $table->foreign('area_id')->references('id')->on('areas');
 
-          
+
         });
     }
 
