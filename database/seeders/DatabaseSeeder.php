@@ -14,13 +14,16 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            Food_typesSeeder::class,
-            IngredientsSeeder::class,
-            OrdersSeeder::class,
-            ProductsSeeder::class,
-            RestaurantSeeder::class,
             UserSeeder::class,
-
+            Food_typeSeeder::class,
+            Restaurant_typeSeeder::class,
+            IngredientSeeder::class,
+            AreaSeeder::class,
+            OpeningHourSeeder::class,
+            ProductSeeder::class,
+            OrderSeeder::class,
+            RestaurantSeeder::class,
+            Area_restaurantSeeder::class
             ]);
     }
 }

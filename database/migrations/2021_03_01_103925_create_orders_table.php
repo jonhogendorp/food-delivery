@@ -15,9 +15,9 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('restaurant_id');
-            $table->unsignedBigInteger('product_id');
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->unsignedBigInteger('restaurant_id')->nullable();
+            $table->unsignedBigInteger('product_id')->nullable();
             $table->string('products');
             $table->decimal('total_price');
 

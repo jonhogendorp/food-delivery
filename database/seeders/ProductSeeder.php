@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
 
-class Products extends Seeder
+class ProductSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,18 +16,21 @@ class Products extends Seeder
     public function run()
     {
         DB::table('products')->insert([
+
             'food_name' => 'pizza',
             'size' => 'large',
             'price' => 7.50,
 
         ]);
         DB::table('products')->insert([
+
             'food_name' => 'hamburger',
             'size' => 'large',
             'price' => 5.50,
 
         ]);
         DB::table('products')->insert([
+
             'food_name' => 'spaghetti',
             'size' => 'large',
             'price' => 6.50,
