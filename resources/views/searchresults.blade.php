@@ -12,14 +12,14 @@
     </div>
 
     <div class="row">
-      
+   
       @forelse ($results as $result)
       
         <div class="col-lg-12">
           <div class="box" data-aos="zoom-in" data-aos-delay="100">
             <span>{{$result->restaurant_name}}</span>
            
-            <p>{{$result->restaurant_type}}</p>
+            <p>{{$result->times}}</p>
            
           </div>
         </div>

@@ -4,9 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Database\Eloquent\Model;
-
-class OpeningHourSeeder extends Seeder
+class TimeSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,21 +13,20 @@ class OpeningHourSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('opening_hours')->insert([
+        DB::table('times')->insert([
 
             'Start' => '16:00:00',
             'Stop' => '03:00:00',
         ]);
-        DB::table('opening_hours')->insert([
+        DB::table('times')->insert([
 
             'Start' => '14:00:00',
             'Stop' => '02:00:00',
         ]);
-        DB::table('opening_hours')->insert([
+        DB::table('times')->insert([
 
             'Start' => '10:00:00',
             'Stop' => '23:00:00',
         ]);
     }
-
 }

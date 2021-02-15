@@ -14,4 +14,9 @@ class Restaurant extends Model
     {
         return $this->belongstoMany(Area::class);
     }
+
+    public function times()
+    {
+        return $this->hasOne(Time::class, 'id');
+    }
 }

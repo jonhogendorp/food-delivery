@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
             Restaurant_typeSeeder::class,
             IngredientSeeder::class,
             AreaSeeder::class,
-            OpeningHourSeeder::class,
+            TimeSeeder::class,
             ProductSeeder::class,
             OrderSeeder::class,
             RestaurantSeeder::class,
