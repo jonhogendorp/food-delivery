@@ -148,5 +148,7 @@ return [
     */
 
     'attributes' => [],
+    'postal_code' => 'Your postal code was incorrect',
 
+    
 ];

@@ -14,8 +14,8 @@ class CreateRestaurantTypesTable extends Migration
     public function up()
     {
         Schema::create('restaurant_types', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('name');
+            $table->string('name', 255)->unique();
+            $table->id();
             $table->timestamps();
         });
     }

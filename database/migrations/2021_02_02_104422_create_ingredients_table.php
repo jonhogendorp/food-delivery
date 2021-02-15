@@ -15,12 +15,8 @@ class CreateIngredientsTable extends Migration
     {
         Schema::create('ingredients', function (Blueprint $table) {
             $table->bigIncrements('id');
-<<<<<<< HEAD:database/migrations/2021_02_02_104422_create_ingredients_table.php
-            
-=======
             $table->unsignedBigInteger("products_id")->nullable();
->>>>>>> ac47bd85ad6efa2c0f792c80f2a56a7ef0d9f702:database/migrations/2021_02_03_104422_create_ingredients_table.php
-            $table->string('name');
+            $table->string('name')->unique();
             $table->timestamps();
 
         });
