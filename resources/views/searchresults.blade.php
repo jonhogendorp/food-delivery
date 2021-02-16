@@ -18,7 +18,7 @@
         <div class="col-lg-12">
           <div class="box" data-aos="zoom-in" data-aos-delay="100">
             <span>{{$result->restaurant_name}}</span>
-           <p>{{$result->times->Start}}</p>
+           <p>{{$result->times->start}}</p>
           
            
           </div>

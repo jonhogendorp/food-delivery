@@ -19,5 +19,6 @@ class Restaurant extends Model
     public function times()
     {
         return $this->hasOne(Time::class, 'id');
+        
     }
 }
