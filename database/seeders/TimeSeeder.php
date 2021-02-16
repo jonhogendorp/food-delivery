@@ -15,18 +15,18 @@ class TimeSeeder extends Seeder
     {
         DB::table('times')->insert([
 
-            'Start' => '16:00:00',
-            'Stop' => '03:00:00',
+            'Start' => '16:00',
+            'Stop' => '03:00',
         ]);
         DB::table('times')->insert([
 
-            'Start' => '14:00:00',
-            'Stop' => '02:00:00',
+            'Start' => '14:00',
+            'Stop' => '02:00',
         ]);
         DB::table('times')->insert([
 
-            'Start' => '10:00:00',
-            'Stop' => '23:00:00',
+            'Start' => '10:00',
+            'Stop' => '23:00',
         ]);
     }
 }

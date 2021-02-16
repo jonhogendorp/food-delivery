@@ -20,18 +20,20 @@ class AreaController extends Controller
     
         $customerRegion = substr($customerPostalCode,0,2);
       
-      
-
-        $results = Restaurant::whereHas('areas', function($q) use ($customerRegion) {
+        $results = Restaurant::with('times:id,Start')->whereHas('areas', function($q) use ($customerRegion) {
             $q->where('area','=', $customerRegion);
             })->get();
-        
-        return view('searchresults',['customerPostalCode' => $customerPostalCode, 'results' => $results]);
-            
 
-            
+
+         
+
+       
+             
+
+        return view('searchresults',['customerPostalCode' => $customerPostalCode, 'results' => $results]);      
 
     }
+
     protected function validatePostalCode()
         {
              request()->validate([
@@ -42,3 +44,16 @@ class AreaController extends Controller
         }
 }
 
+
+// if later dan start tijd -> vervang tijd voor open
+// else vroeger dan start tijd -> vervang tijd voor closed
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
