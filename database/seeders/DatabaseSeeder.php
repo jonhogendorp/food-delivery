@@ -23,7 +23,9 @@ class DatabaseSeeder extends Seeder
             ProductSeeder::class,
             OrderSeeder::class,
             RestaurantSeeder::class,
-            Area_restaurantSeeder::class
+            Area_restaurantSeeder::class,
+            CreateAdminUserSeeder::class,
+            PermissionTableSeeder::class,
             ]);
     }
 }
