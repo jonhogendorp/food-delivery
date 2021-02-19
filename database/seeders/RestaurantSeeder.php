@@ -57,10 +57,10 @@ public function run()
     ]);
 
     DB::table('restaurants')->insert([
-            'restaurant_name' => 'My Little Smoked Pony',
+            'restaurant_name' => 'My Little Baked Pony',
             'restaurant_type_id' => 1,
             'time_id' => 1,
-            'email' => 'smoked@pony.nl',
+            'email' => 'baked@pony.nl',
             'street' => 'Dorpstraat',
             'house_number' => 8,
             'house_number_addition' => 'A1',
@@ -85,7 +85,7 @@ public function run()
         ]);
 
     DB::table('restaurants')->insert([
-            'restaurant_name' => 'TGI Wednesday',
+            'restaurant_name' => 'TGI Monday!',
             'restaurant_type_id' => 3,
             'time_id' => 3,
             'email' => 'finding@nemo.nl',

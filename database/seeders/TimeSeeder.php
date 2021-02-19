@@ -26,12 +26,12 @@ class TimeSeeder extends Seeder
         DB::table('times')->insert([
 
             'start' => '15:00',
-            'stop' => '23:00',
+            'stop' => '01:00',
         ]);
 
         DB::table('times')->insert([
 
-            'start' => '10:00',
+            'start' => '12:00',
             'stop' => '22:30',
         ]);
 
@@ -43,8 +43,8 @@ class TimeSeeder extends Seeder
 
         DB::table('times')->insert([
 
-            'start' => '11:00',
-            'stop' => '10:00',
+            'start' => '13:00',
+            'stop' => '06:00',
         ]);
 
     }

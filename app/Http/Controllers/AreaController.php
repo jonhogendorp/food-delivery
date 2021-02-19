@@ -19,18 +19,22 @@ class AreaController extends Controller
         $customerRegion = substr($customerPostalCode,0,2);
       
         
-        $results = Restaurant::with('times:id,start')->whereHas('areas', function($q) use ($customerRegion) {
+        $results = Restaurant::with('times:id,start,stop')->whereHas('areas', function($q) use ($customerRegion) {
             $q->where('area','=', $customerRegion);
-            })->get()->sortBy('times.start');
+            })->get();
 
             foreach($results as $result){
                 if($result->times->start < carbon::now()->toTimeString()){
-                    $result->times->start = 'Open';
+                    $result->times->start = 'Open untill '.$result->times->stop."";
+                    
                 }
                 else{
-                    $result->times->start = 'Closed';
+                    $result->times->start = 'Closed untill '.$result->times->start."";
                 }
+                
             } 
+            
+            $results = $results->sortByDesc('times.start');
 
        
         return view('searchresults',['customerPostalCode' => $customerPostalCode, 'results' => $results]);      
