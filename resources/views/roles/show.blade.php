@@ -5,6 +5,7 @@
 <div class="pull-left" style="margin: 200px">
 <h2> Show Role</h2>
 </div>
+@can('role-list')
 <div class="pull-right">
 <a class="btn btn-primary" href="{{ route('roles.index') }}"> Back</a>
 </div>
@@ -28,4 +29,8 @@
 </div>
 </div>
 </div>
+@endcan
+@cannot('role-list')
+<h1>Sorry My friend you don't have a permission to see this page!!!</h1>
+@endcannot
 @endsection

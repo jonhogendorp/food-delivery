@@ -6,6 +6,7 @@
 <h2>Users Management</h2>
 </div>
 <div class="pull-right">
+@can('role-list')
 <a class="btn btn-success" href="{{ route('users.create') }}"> Create New User</a>
 </div>
 </div>
@@ -48,5 +49,9 @@
 @endforeach
 </table>
 {!! $data->render() !!}
+@endcan
+@cannot('role-list')
+<h1>Sorry My friend you don't have a permission to see this page!!!</h1>
+@endcannot
 <p class="text-center text-primary"><small>Tutorial by rscoder.com</small></p>
 @endsection
