@@ -22,7 +22,7 @@
           <h4>Price:</h4>
           <p>{{$product->price}}</p>
           <br>
-          <p><button class="popup2_open">Order Me</button></p>
+          <button onclick="openNav()">Order Me</button>
         </div>
       </div>
     </div>  
@@ -34,9 +34,20 @@
   </section>
 
 </section>
-<section id="popup2">
-  <h2>My popup 2</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, eos, accusamus delectus harum nostrum fugiat quas tempora excepturi nobis incidunt quisquam facilis, atque ullam. Quidem animi dolorem quasi facere suscipit.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, eos, accusamus delectus harum nostrum fugiat quas tempora excepturi nobis incidunt quisquam facilis, atque ullam. Quidem animi dolorem quasi facere suscipit.</p>
-</section>
+<div id="order" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+    <a href="javascript:void(0)" onclick="closeNav()">Close</a>
+  </div>
+
+</div>
+
 @endsection

@@ -81,6 +81,7 @@
 <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
 
 <!-- assets JS Files -->
+<script src="/js/orderoverlay.js"></script>
 <script src="/assets/jquery/jquery.min.js"></script>
 <script src="/assets/jquery/jquery.min.js"></script>
 <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -94,9 +95,6 @@
 
 <!-- Template Main JS File -->
 <script src="/js/main.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/vast-engineering/jquery-popup-overlay@2/jquery.popupoverlay.min.js"></script>
-<script src="/js/orderoverlay.js"></script>
 
 </body>
 
