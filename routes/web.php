@@ -37,6 +37,19 @@ Route::get('/info', function () {
  Route::get('contact', [App\Http\Controllers\ContactController::class, 'index'])->name('contact');
  Route::get('restaurant', [App\Http\Controllers\RestaurantController::class, 'show'])->name('restaurant');
  Route::post('search', 'App\Http\Controllers\AreaController@search')->name('searchresults');
+ Route::get('/restaurants/{restaurant}', 'App\Http\Controllers\RestaurantController@show')->name('restaurants.show');
+
+
+
+
+
+
+
+
+
+
+
+
 //  Route::get('/restaurant', [App\Http\Controllers\RestaurantController::class, 'show'])->name('restaurant');
 
 

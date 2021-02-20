@@ -17,7 +17,7 @@ class CreateRestaurantsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('restaurant_type_id')->unsigned()->nullable();
             $table->unsignedBigInteger('time_id')->unsigned()->nullable();
-
+       
             $table->string('restaurant_name', 255);
             $table->string('email');
             $table->string('street');
@@ -35,6 +35,7 @@ class CreateRestaurantsTable extends Migration
             $table->foreign('time_id')
                 ->references('id')
                 ->on('times');
+          
 
 
         });

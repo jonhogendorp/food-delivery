@@ -17,7 +17,7 @@
       
         <div class="col-lg-12">
           <div class="box" data-aos="zoom-in" data-aos-delay="100">
-            <span>{{$result->restaurant_name}}</span>
+            <span><a href="{{$result->path()}}">{{$result->restaurant_name}}</a></span>
            <p>{{$result->times->start}}</p>
           
            
@@ -29,6 +29,8 @@
               <span>No restaurants were found in your area.</span>
             </div>
               
+
+
            
           </div>
       @endforelse   
