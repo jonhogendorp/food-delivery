@@ -7,13 +7,13 @@ use App\Models\Restaurant;
 use Axlon\PostalCodeValidation\Rules\PostalCode;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-
 class AreaController extends Controller
 {
     use HasFactory;
 
+   
     
-    public function search(Request $request)
+    public function index(Request $request)
     {
         $this->validatePostalCode();
 
