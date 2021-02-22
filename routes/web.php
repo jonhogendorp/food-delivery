@@ -39,9 +39,9 @@ Route::get('/info', function () {
 
 
  
- Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index'])->name('contact');
- Route::get('/restaurant', [App\Http\Controllers\RestaurantController::class, 'index'])->name('restaurant');
+ Route::get('/contact', 'App\Http\Controllers\ContactController@index')->name('contact');
+ Route::get('/restaurant', 'App\Http\Controllers\RestaurantController@index')->name('restaurant');
  Route::post('search', 'App\Http\Controllers\AreaController@index')->name('searchresults');
  Route::get('/restaurants/{show}', '\App\Http\Controllers\RestaurantController@show')->name('restaurants.show');
- Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+ Route::get('home', 'App\Http\Controllers\HomeController@index')->name('home');
  

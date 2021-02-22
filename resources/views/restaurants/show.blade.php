@@ -7,14 +7,14 @@
     <section id="restaurant-detail" class="restaurant-detail">
         {{-- about gedeelte --}}
         <div class="restaurant-about">
-            <h4>{{$results->restaurant_name}}</h4>
+            <h4>{{$restaurant->restaurant_name}}</h4>
             <p></p>
         </div>
 
     <div class="container" data-aos="fade-up">
         {{-- populaire gerechten  --}}
         <div class="row">
-            @foreach ($results as $product)
+            @foreach ($restaurant->products as $product)
             {{-- <div class="col-lg-12">
                 <div class="box row" data-aos="zoom-in" data-aos-delay="100">
                     <div class="col-lg-10">
@@ -33,9 +33,9 @@
                                 </svg>
                         </li>
                         <li class="col-lg-10">
-                            <h3>name product</h3>
-                            <p>ingredienten</p>
-                            <p>price</p>
+                            <h3>{{$product->food_name}}</h3>
+                            <p>{{$product->price}}</p>
+                            <p>ingredients</p>
                         </li>
                 </div>
             </div>
