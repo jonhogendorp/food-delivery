@@ -3,7 +3,27 @@
     color: white;
 }
 
-/* The Overlay (background) */
+.orderoverlay {
+  margin: auto;
+  position: relative;
+ }
+ 
+.product, .size, .price, input, select{
+  font-family: "Helvetica", sans-serif;
+  width : 400px;
+  height: 40px;
+  padding: 0;
+  margin: 10px;
+  box-sizing: border-box;  
+ }
+
+ .restauranttitle, .ordertitle{
+  font-family: "Helvetica", sans-serif;
+  color: #0CBE57;
+ }
+
+ 
+
 .overlay {
   /* Height & width depends on how you want to reveal the overlay (see JS below) */   
   height: 100%;
@@ -16,25 +36,37 @@
   background-color: rgba(255, 255, 255, 0.9); /* Black w/opacity */
   overflow-x: hidden; /* Disable horizontal scroll */
   transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  color: black;
 }
 
 /* Position the content inside the overlay */
 .overlay-content {
   position: relative;
-  top: 25%; /* 25% from the top */
+  top: 40%; /* 25% from the top */
   width: 100%; /* 100% width */
   text-align: center; /* Centered text/links */
   margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
 }
 
-/* The navigation links inside the overlay */
-.overlay a {
-  padding: 8px;
+
+.button {
+  background-color: #0CBE57; /* Green */
+  border: none;
+  color: white;
+  padding: 7px 16px;
+  text-align: center;
   text-decoration: none;
-  font-size: 36px;
-  color: #818181;
-  display: block; /* Display block instead of inline */
-  transition: 0.3s; /* Transition effects on hover (color) */
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5%;
+  transition-duration: 0.4s;
+  width: 130px;
+  height: 40px;
+}
+
+.button:hover {
+  background-color: #ffffff; /* Green */
+  color: black;
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -10079,7 +10111,7 @@ body {
 }
 
 a {
-  color: #cda45e;
+  color: #0CBE57;
 }
 
 a:hover {
@@ -10112,8 +10144,8 @@ h1, h2, h3, h4, h5, h6 {
   top: calc(50% - 30px);
   left: calc(50% - 30px);
   border: 6px solid #1a1814;
-  border-top-color: #cda45e;
-  border-bottom-color: #cda45e;
+  border-top-color: #0CBE57;
+  border-bottom-color: #0CBE57;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -10206,7 +10238,7 @@ h1, h2, h3, h4, h5, h6 {
   list-style: none;
   padding: 0;
   margin: 0;
-  color: #cda45e;
+  color: #0CBE57;
 }
 
 #topbar .languages ul a {
@@ -10297,7 +10329,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu .book-a-table a {
-  border: 2px solid #cda45e;
+  border: 2px solid #0CBE57;
   color: #fff;
   border-radius: 50px;
   padding: 8px 25px;
@@ -10309,7 +10341,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu .book-a-table a:hover {
-  background: #cda45e;
+  background: #0CBE57;
   color: #fff;
 }
 
@@ -10347,7 +10379,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
-  color: #cda45e;
+  color: #0CBE57;
 }
 
 .nav-menu .drop-down > a:after {
@@ -10463,7 +10495,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
-  color: #cda45e;
+  color: #0CBE57;
   text-decoration: none;
 }
 
@@ -10481,7 +10513,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .mobile-nav .book-a-table a {
   color: #fff;
-  border: 2px solid #cda45e;
+  border: 2px solid #0CBE57;
   border-radius: 50px;
   margin: 20px 0 0 0;
   padding: 10px 25px;
@@ -10494,7 +10526,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav .book-a-table a:hover {
-  background: #cda45e;
+  background: #0CBE57;
   color: #fff;
 }
 
@@ -10578,7 +10610,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero h1 span {
-  color: #cda45e;
+  color: #0CBE57;
 }
 
 #hero h2 {
@@ -10602,11 +10634,11 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.3s;
   line-height: 1;
   color: white;
-  border: 2px solid #cda45e;
+  border: 2px solid #0CBE57;
 }
 
 #hero .btn-menu:hover, #hero .btn-book:hover {
-  background: #cda45e;
+  background: #0CBE57;
   color: #fff;
 }
 
@@ -10617,7 +10649,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero .play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(#cda45e 50%, rgba(205, 164, 94, 0.4) 52%);
+  background: radial-gradient(#0CBE57 50%, rgba(205, 164, 94, 0.4) 52%);
   border-radius: 50%;
   display: block;
   position: relative;
@@ -10663,7 +10695,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .play-btn:hover::after {
-  border-left: 15px solid #cda45e;
+  border-left: 15px solid #0CBE57;
   transform: scale(20);
 }
 
@@ -10779,7 +10811,7 @@ section {
   font-size: 36px;
   font-weight: 700;
   font-family: "Playfair Display", serif;
-  color: #cda45e;
+  color: #0CBE57;
 }
 
 /*--------------------------------------------------------------
@@ -10873,8 +10905,8 @@ section {
   height: 60px;
   z-index: 1;
   content: "";
-  border-left: 5px solid #cda45e;
-  border-top: 5px solid #cda45e;
+  border-left: 5px solid #0CBE57;
+  border-top: 5px solid #0CBE57;
   transition: 0.5s;
 }
 
@@ -10886,8 +10918,8 @@ section {
   height: 60px;
   z-index: 2;
   content: "";
-  border-right: 5px solid #cda45e;
-  border-bottom: 5px solid #cda45e;
+  border-right: 5px solid #0CBE57;
+  border-bottom: 5px solid #0CBE57;
   transition: 0.5s;
 }
 
@@ -10922,7 +10954,7 @@ section {
 .about .content ul i {
   font-size: 20px;
   padding-right: 4px;
-  color: #cda45e;
+  color: #0CBE57;
 }
 
 .about .content p:last-child {
@@ -11014,7 +11046,7 @@ section {
 }
 
 .menu #menu-flters li:hover, .menu #menu-flters li.filter-active {
-  color: #cda45e;
+  color: #0CBE57;
 }
 
 .menu #menu-flters li:last-child {
@@ -11062,7 +11094,7 @@ section {
 }
 
 .menu .menu-content a:hover {
-  color: #cda45e;
+  color: #0CBE57;
 }
 
 .menu .menu-content span {
@@ -11071,7 +11103,7 @@ section {
   z-index: 3;
   padding: 0 10px;
   font-weight: 600;
-  color: #cda45e;
+  color: #0CBE57;
 }
 
 .menu .menu-ingredients {
@@ -11099,23 +11131,23 @@ section {
   transition: 0.3s;
   color: #fff;
   border-radius: 0;
-  border-right: 2px solid #cda45e;
+  border-right: 2px solid #0CBE57;
   font-weight: 600;
   font-size: 15px;
 }
 
 .specials .nav-link:hover {
-  color: #cda45e;
+  color: #0CBE57;
 }
 
 .specials .nav-link.active {
   color: #1a1814;
-  background: #cda45e;
-  border-color: #cda45e;
+  background: #0CBE57;
+  border-color: #0CBE57;
 }
 
 .specials .nav-link:hover {
-  border-color: #cda45e;
+  border-color: #0CBE57;
 }
 
 .specials .tab-pane.active {
@@ -11188,7 +11220,7 @@ section {
 .events .event-item h3 {
   font-weight: 600;
   font-size: 26px;
-  color: #cda45e;
+  color: #0CBE57;
 }
 
 .events .event-item .price {
@@ -11199,7 +11231,7 @@ section {
 }
 
 .events .event-item .price span {
-  border-bottom: 2px solid #cda45e;
+  border-bottom: 2px solid #0CBE57;
 }
 
 .events .event-item ul {
@@ -11214,7 +11246,7 @@ section {
 .events .event-item ul i {
   font-size: 20px;
   padding-right: 4px;
-  color: #cda45e;
+  color: #0CBE57;
 }
 
 .events .event-item p:last-child {
@@ -11236,7 +11268,7 @@ section {
 }
 
 .events .owl-dot.active {
-  background-color: #cda45e !important;
+  background-color: #0CBE57 !important;
 }
 
 @media (min-width: 992px) {
@@ -11298,7 +11330,7 @@ section {
   width: 24px;
   height: 24px;
   margin: 0 10px -6px 0;
-  border: 3px solid #cda45e;
+  border: 3px solid #0CBE57;
   border-top-color: #1a1814;
   -webkit-animation: animate-loading 1s linear infinite;
   animation: animate-loading 1s linear infinite;
@@ -11326,7 +11358,7 @@ section {
 }
 
 .book-a-table .php-email-form input:focus, .book-a-table .php-email-form textarea:focus {
-  border-color: #cda45e;
+  border-color: #0CBE57;
 }
 
 .book-a-table .php-email-form input {
@@ -11338,7 +11370,7 @@ section {
 }
 
 .book-a-table .php-email-form button[type=submit] {
-  background: #cda45e;
+  background: #0CBE57;
   border: 0;
   padding: 10px 35px;
   color: #fff;
@@ -11424,7 +11456,7 @@ section {
 }
 
 .testimonials .owl-dot.active {
-  background-color: #cda45e !important;
+  background-color: #0CBE57 !important;
 }
 
 @media (max-width: 767px) {
@@ -11510,7 +11542,7 @@ section {
 }
 
 .chefs .member .social a:hover {
-  color: #cda45e;
+  color: #0CBE57;
 }
 
 .chefs .member .social i {
@@ -11546,7 +11578,7 @@ section {
   float: left;
   width: 44px;
   height: 44px;
-  background: #cda45e;
+  background: #0CBE57;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11620,7 +11652,7 @@ section {
   width: 24px;
   height: 24px;
   margin: 0 10px -6px 0;
-  border: 3px solid #cda45e;
+  border: 3px solid #0CBE57;
   border-top-color: #1a1814;
   -webkit-animation: animate-loading 1s linear infinite;
   animation: animate-loading 1s linear infinite;
@@ -11648,7 +11680,7 @@ section {
 }
 
 .contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
-  border-color: #cda45e;
+  border-color: #0CBE57;
 }
 
 .contact .php-email-form input {
@@ -11660,7 +11692,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit] {
-  background: #cda45e;
+  background: #0CBE57;
   border: 0;
   padding: 10px 35px;
   color: #fff;

@@ -49,7 +49,7 @@ class ProductSeeder extends Seeder
 
         DB::table('products')->insert([
             'restaurant_id' => 4,
-            'food_name' => 'Snuitje well baked with Fries',
+            'food_name' => 'Well baked Snuitje with Fries',
             'size' => 'large',
             'price' => 10.50,
 
