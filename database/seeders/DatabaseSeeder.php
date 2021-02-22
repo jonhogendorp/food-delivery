@@ -22,9 +22,10 @@ class DatabaseSeeder extends Seeder
             IngredientSeeder::class,
             AreaSeeder::class,
             TimeSeeder::class,
-            ProductSeeder::class,
+            
             OrderSeeder::class,
             RestaurantSeeder::class,
+            ProductSeeder::class,
             Area_restaurantSeeder::class, 
             ]);
     }
