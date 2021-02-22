@@ -1,9 +1,6 @@
 <?php
-
 namespace Database\Seeders;
-
 use Illuminate\Database\Seeder;
-
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -22,10 +19,11 @@ class DatabaseSeeder extends Seeder
             IngredientSeeder::class,
             AreaSeeder::class,
             TimeSeeder::class,
-            ProductSeeder::class,
+
             OrderSeeder::class,
             RestaurantSeeder::class,
-            Area_restaurantSeeder::class, 
+            ProductSeeder::class,
+            Area_restaurantSeeder::class,
             ]);
     }
 }
