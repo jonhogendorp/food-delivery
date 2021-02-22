@@ -17,10 +17,16 @@ class RestaurantController extends Controller
         return view('restaurant', []);
     }
 
-    public function show(Restaurant $result){
-        $results = Restaurant::whereid($result)->first();
+    
+    public function show(Restaurant $restaurant){
 
-        return view('restaurants.show', ['result' => $result,]);
+        
+
+
+
+        return view('restaurants.show', ['restaurant' => $restaurant]);
     }
+
+
 }
 // ['restaurant'=> $result]

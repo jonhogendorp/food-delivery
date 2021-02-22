@@ -30,7 +30,7 @@
                                     </svg>
                             </li>
                             <li class="col-lg-10">
-                                    <h4><a href="{{ route('restaurants.show', $result->id)}}">{{$result->restaurant_name}}</a></h4>
+                                    <h4><a href="{{$result->path()}}">{{$result->restaurant_name}}</a></h4>
                                     <p>{{$result->restaurant_type}}</p>
                                     <p>Döner, Turkse pizza, Italiaanse Pizza, Kapsalon</p>
                             </li>
@@ -45,6 +45,10 @@
             <div class="box" data-aos="zoom-in" data-aos-delay="100">
               <span>No restaurants were found in your area.</span>
             </div>
+              
+
+
+           
           </div>
       @endforelse
 
