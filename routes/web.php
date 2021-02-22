@@ -27,6 +27,9 @@ use Illuminate\Support\Facades\Auth;
  Route::get('/', function () {
     return view('home');
 });
+Route::get('/info', function () {
+    return view('info');
+});
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles','App\Http\Controllers\RoleController');
     Route::resource('/users', 'App\Http\Controllers\UserController');
@@ -34,18 +37,20 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('restaurants','App\Http\Controllers\RestaurantmanageController');
     });
 
+
 Route::get('/info', function () {
     return view('info');
 });
 
 
- Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
- Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index'])->name('contact');
- Route::get('/restaurant', [App\Http\Controllers\RestaurantController::class, 'show'])->name('restaurant');
- Route::post('search', 'App\Http\Controllers\AreaController@index')->name('searchresults');
-//  Route::get('/restaurant', [App\Http\Controllers\RestaurantController::class, 'show'])->name('restaurant');
+Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('contact', [App\Http\Controllers\ContactController::class, 'index'])->name('contact');
+Route::get('restaurant', [App\Http\Controllers\RestaurantController::class, 'index'])->name('restaurant');
+Route::post('search', 'App\Http\Controllers\AreaController@search')->name('searchresults');
+Route::get('/restaurants/{restaurant}', 'App\Http\Controllers\RestaurantController@show')->name('restaurants.show');
 
 
 //  <meta name="csrf-token" content="{{ csrf_token() }}">
 
 // {{route('search')}}
+

@@ -15,25 +15,45 @@ class Area_restaurantSeeder extends Seeder
     public function run()
     {
         DB::table('area_restaurant')->insert([
-         
+
             'restaurant_id' => 1,
             'area_id' => 1,
         ]);
 
 
         DB::table('area_restaurant')->insert([
-         
+
             'restaurant_id' => 2,
             'area_id' => 3,
         ]);
 
 
         DB::table('area_restaurant')->insert([
-         
+
             'restaurant_id' => 3,
             'area_id' => 1,
         ]);
 
-        
+        DB::table('area_restaurant')->insert([
+
+            'restaurant_id' => 4,
+            'area_id' => 1,
+        ]);
+
+        DB::table('area_restaurant')->insert([
+
+            'restaurant_id' => 5,
+            'area_id' => 1,
+        ]);
+
+        DB::table('area_restaurant')->insert([
+
+            'restaurant_id' => 6,
+            'area_id' => 1,
+        ]);
+
+
+
+
     }
 }

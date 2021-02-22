@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-<!-- ======= content Section ======= --> 
+<!-- ======= content Section ======= -->
 <section class="d-flex align-items-center">
 </section>
 <section id="why-us" class="why-us">
@@ -12,15 +12,15 @@
     </div>
 
     <div class="row">
-      
+
       @forelse ($results as $result)
-      
+
         <div class="col-lg-12">
           <div class="box" data-aos="zoom-in" data-aos-delay="100">
-            <span>{{$result->restaurant_name}}</span>
-           
-            <p>{{$result->restaurant_type}}</p>
-           
+            <span><a href="{{$result->path()}}">{{$result->restaurant_name}}</a></span>
+           <p>{{$result->times->start}}</p>
+
+
           </div>
         </div>
         @empty
@@ -28,10 +28,12 @@
             <div class="box" data-aos="zoom-in" data-aos-delay="100">
               <span>No restaurants were found in your area.</span>
             </div>
-              
-           
+
+
+
+
           </div>
-      @endforelse   
+      @endforelse
     </div>
   </div>
 </section><!-- content Section -->
