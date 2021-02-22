@@ -11,7 +11,10 @@ class AreaController extends Controller
 {
     use HasFactory;
 
-   
+   public function path()
+   {
+       
+   }
     
     public function index(Request $request)
     {

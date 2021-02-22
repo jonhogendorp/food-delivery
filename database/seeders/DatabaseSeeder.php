@@ -14,6 +14,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
+            PermissionTableSeeder::class,
+            CreateAdminUserSeeder::class,
             UserSeeder::class,
             Food_typeSeeder::class,
             Restaurant_typeSeeder::class,
@@ -23,9 +25,7 @@ class DatabaseSeeder extends Seeder
             ProductSeeder::class,
             OrderSeeder::class,
             RestaurantSeeder::class,
-            Area_restaurantSeeder::class,
-            CreateAdminUserSeeder::class,
-            PermissionTableSeeder::class,
+            Area_restaurantSeeder::class, 
             ]);
     }
 }
