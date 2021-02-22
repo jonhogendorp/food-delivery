@@ -3,6 +3,8 @@
     color: white;
 }
 
+<<<<<<< HEAD
+=======
 .orderoverlay {
   margin: auto;
   position: relative;
@@ -90,6 +92,7 @@
     right: 35px;
   }
 }
+>>>>>>> shoppingbasket
 @charset "UTF-8";
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
@@ -10525,7 +10528,7 @@ section {
 }
 
 .menu #menu-flters li:hover, .menu #menu-flters li.filter-active {
-  color: #0CBE57;
+  color: #cda45e;
 }
 
 .menu #menu-flters li:last-child {
@@ -10837,7 +10840,7 @@ section {
 }
 
 .book-a-table .php-email-form input:focus, .book-a-table .php-email-form textarea:focus {
-  border-color: #0CBE57;
+  border-color: #cda45e;
 }
 
 .book-a-table .php-email-form input {
@@ -11159,7 +11162,7 @@ section {
 }
 
 .contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
-  border-color: #0CBE57;
+  border-color: #cda45e;
 }
 
 .contact .php-email-form input {

@@ -1,5 +1,4 @@
 @extends('layout')
-<<<<<<< HEAD
     @section('content')
     {{-- <section class="d-flex align-items-center">
     </section> --}}
@@ -8,14 +7,14 @@
     <section id="restaurant-detail" class="restaurant-detail">
         {{-- about gedeelte --}}
         <div class="restaurant-about">
-            <h4>{{$result->restaurant_name}}</h4>
+            <h4>{{$results->restaurant_name}}</h4>
             <p></p>
         </div>
 
     <div class="container" data-aos="fade-up">
         {{-- populaire gerechten  --}}
         <div class="row">
-            @foreach ($result as $product)
+            @foreach ($results as $product)
             {{-- <div class="col-lg-12">
                 <div class="box row" data-aos="zoom-in" data-aos-delay="100">
                     <div class="col-lg-10">
@@ -45,7 +44,6 @@
     </div>
     </section>
     @endsection
-=======
 @section('content')
 
 <section id="about" class="about">
@@ -123,4 +121,3 @@
  
 
 @endsection
->>>>>>> shoppingbasket
