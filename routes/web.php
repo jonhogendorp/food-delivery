@@ -27,10 +27,10 @@ use Illuminate\Support\Facades\Auth;
     return view('home');
 });
 Route::group(['middleware' => ['auth']], function() {
-    Route::resource('roles','App\Http\Controllers\RoleController');
+    Route::resource('/roles','App\Http\Controllers\RoleController');
     Route::resource('/users', 'App\Http\Controllers\UserController');
-    Route::resource('products','App\Http\Controllers\ProductController');
-    Route::resource('restaurants','App\Http\Controllers\RestaurantmanageController');
+    Route::resource('/products','App\Http\Controllers\ProductController');
+    Route::resource('/restaurants','App\Http\Controllers\RestaurantmanageController');
     });
 
 Route::get('/info', function () {
@@ -38,10 +38,10 @@ Route::get('/info', function () {
 });
 
 
- 
+
  Route::get('/contact', 'App\Http\Controllers\ContactController@index')->name('contact');
  Route::get('/restaurant', 'App\Http\Controllers\RestaurantController@index')->name('restaurant');
- Route::post('search', 'App\Http\Controllers\AreaController@index')->name('searchresults');
+ Route::post('/search', 'App\Http\Controllers\AreaController@index')->name('searchresults');
  Route::get('/restaurants/{show}', '\App\Http\Controllers\RestaurantController@show')->name('restaurants.show');
- Route::get('home', 'App\Http\Controllers\HomeController@index')->name('home');
- 
+ Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
+
