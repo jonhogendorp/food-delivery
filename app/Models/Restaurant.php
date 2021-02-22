@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Area;
+use App\Models\Time;
 
 class Restaurant extends Model
 {
@@ -23,5 +24,11 @@ class Restaurant extends Model
     public function path()
     {
         return route('restaurants.show', $this);
+    }
+    
+    public function times()
+    {
+        return $this->hasOne(Time::class, 'id');
+        
     }
 }
