@@ -8,13 +8,9 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul class="header-text">
-          <li ><a href="/home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="/restaurant">Restaurant</a></li>
-          <li><a href="#specials">Specials</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#chefs">Chefs</a></li>
+          <li class="nav-item" ><a class="nav-link" href="/home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="/restaurant">Restaurant</a></li>
           @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">

@@ -10,8 +10,18 @@ class Restaurant extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     public function areas()
     {
         return $this->belongstoMany(Area::class);
+    }
+
+
+
+
+    public function path()
+    {
+        return route('restaurants.show', $this);
     }
 }
