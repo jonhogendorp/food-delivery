@@ -26,6 +26,12 @@ use Illuminate\Support\Facades\Auth;
  Route::get('/', function () {
     return view('home');
 });
+Route::group(['middleware' => ['auth']], function() {
+    Route::resource('roles','App\Http\Controllers\RoleController');
+    Route::resource('/users', 'App\Http\Controllers\UserController');
+    Route::resource('products','App\Http\Controllers\ProductController');
+    Route::resource('restaurants','App\Http\Controllers\RestaurantmanageController');
+    });
 
 Route::get('/info', function () {
     return view('info');

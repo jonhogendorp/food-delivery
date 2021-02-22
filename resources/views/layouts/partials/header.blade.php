@@ -1,61 +1,83 @@
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center">
+  <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"  ><a href="/home">Foodies</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo mr-auto"><img src="/img/logo.png" alt="" class="img-fluid"></a>-->
+    <h1 class="logo mr-auto"  ><a href="/home">Foodies</a></h1>
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <!-- <a href="index.html" class="logo mr-auto"><img src="/img/logo.png" alt="" class="img-fluid"></a>-->
 
-      <nav class="nav-menu d-none d-lg-block">
-        <ul class="header-text">
-          <li class="nav-item" ><a class="nav-link" href="/home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="/restaurant">Restaurant</a></li>
-          @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
+    <nav class="nav-menu d-none d-lg-block">
+      <ul class="header-text">
 
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
+        <li ><a href="/home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="/restaurant">Restaurant</a></li>
+        <li><a href="#specials">Specials</a></li>
 
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>{{ Auth::user()->first_name }}</a>
+        @auth
+        @can('role-list')
+        <li><a href="roles">Roles Manage</a></li>
+        <li><a href="users">Users Manage</a></li>
+        @endcan
+        @can('product-create')
+        <li><a href="products">Products Manage</a></li>
+        <li><a href="restaurants">Restaurants Manage</a></li>
+        @endcan
+        @endauth
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" style="color: black" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+        @guest
+        <ul>
+                          @if (Route::has('login'))
+                              <li class="nav-item dropdown">
+                                  <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                                      <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                                    </svg></a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
+
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                  <a class="nav-link" href="{{ route('login') }}" style="color: black">{{ __('Login') }}</a>
 
 
 
 
 
-          {{-- @guest
-          <li><a href="register">Register</a></li>
-          <li class="book-a-table text-center"><a href="login">Login</a></li>
-          @else
-          <a class="btn btn-link" href="{{ route('logout') }}">
-            {{ Auth::user()->first_name }}
-        </a>
-          @endguest --}}
-        </ul>
-      </nav><!-- .nav-menu -->
+                                  <a class="nav-link" href="{{ route('register') }}" style="color: black">{{ __('Register') }}</a>
+                              </li>
+                          @endif
+                      </ul>
+                      @else
 
-    </div>
-  </header><!-- End Header -->
+                          <li class="nav-item dropdown">
+                              <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>{{ Auth::user()->first_name }}</a>
+
+                              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" style="color: black" href="{{ route('logout') }}"
+                                     onclick="event.preventDefault();
+                                                   document.getElementById('logout-form').submit();">
+                                      {{ __('Logout') }}
+                                  </a>
+
+                                  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                      @csrf
+                                  </form>
+                              </div>
+                          </li>
+        @endguest
+
+
+
+
+
+        {{-- @guest
+        <li><a href="register">Register</a></li>
+        <li class="book-a-table text-center"><a href="login">Login</a></li>
+        @else
+        <a class="btn btn-link" href="{{ route('logout') }}">
+          {{ Auth::user()->first_name }}
+      </a>
+        @endguest --}}
+      </ul>
+    </nav><!-- .nav-menu -->
+
+  </div>
+</header><!-- End Header -->

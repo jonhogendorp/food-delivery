@@ -45,4 +45,8 @@ class Restaurant extends Model
         return view('restaurants.show', ['results' => $results]);
 
     }
+    protected $fillable = [
+        'restaurant_name', 'email', 'street',  'house_number',  'house_number_addition',  'postal_code', 'city', 'phone',
+    ];
+
 }
