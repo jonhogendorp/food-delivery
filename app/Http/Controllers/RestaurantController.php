@@ -14,8 +14,9 @@ class RestaurantController extends Controller
         dd($request->all());
     }
 
-    public function index(){
-        return view('restaurant', []);
+    public function index(Restaurant $restaurant){
+
+        return view('restaurants.show', ['restaurant' => $restaurant]);
     }
 
     
