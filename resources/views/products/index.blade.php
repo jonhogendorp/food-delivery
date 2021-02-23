@@ -38,10 +38,12 @@
 </td>
 <td>
 <a class="btn btn-info" href="{{ route('products.show',$product->id) }}">Show</a>
+@hasanyrole('Restaurant_Owner|Admin')
 <a class="btn btn-primary" href="{{ route('products.edit',$product->id) }}">Edit</a>
 {!! Form::open(['method' => 'DELETE','route' => ['products.destroy', $product->id],'style'=>'display:inline']) !!}
 {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
 {!! Form::close() !!}
+@endhasrole
 </td>
 </tr>
 @endforeach

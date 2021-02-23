@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 use App\Models\Product;
+use App\Models\Restaurant;
 use Illuminate\Http\Request;
 class ProductController extends Controller
 {
@@ -34,7 +35,7 @@ return view('products.index',compact('products'))
 */
 public function create()
 {
-return view('products.create');
+return view('products.create')->with('restaurants', Restaurant::all());
 }
 /**
 * Store a newly created resource in storage.
@@ -48,6 +49,7 @@ request()->validate([
 'food_name' => 'required',
 'size' => 'required',
 'price' => 'required',
+'restaurant_id'=> 'required',
 ]);
 Product::create($request->all());
 return redirect()->route('products.index')
