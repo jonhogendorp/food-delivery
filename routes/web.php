@@ -45,3 +45,9 @@ Route::get('/info', function () {
  Route::get('/restaurants/{show}', '\App\Http\Controllers\RestaurantController@show')->name('restaurants.show');
  Route::get('home', 'App\Http\Controllers\HomeController@index')->name('home');
  
+
+//  routes for session (shoppinbasket)
+ 
+Route::get('session', 'App\Http\Controllers\ShoppingController@put')->name('session');
+Route::get('getsession', 'App\Http\Controllers\ShoppingController@get')->name('getsession');
+Route::get('delete', 'App\Http\Controllers\ShoppingController@delete')->name('delete');

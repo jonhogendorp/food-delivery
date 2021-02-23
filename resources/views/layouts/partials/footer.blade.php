@@ -82,6 +82,7 @@
 
 <!-- assets JS Files -->
 <script src="/js/orderoverlay.js"></script>
+<script src="/js/orderquantity.js"></script>
 <script src="/assets/jquery/jquery.min.js"></script>
 <script src="/assets/jquery/jquery.min.js"></script>
 <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
