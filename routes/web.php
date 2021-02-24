@@ -30,6 +30,10 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles','App\Http\Controllers\RoleController');
     Route::resource('/users', 'App\Http\Controllers\UserController');
     Route::resource('products','App\Http\Controllers\ProductController');
+    Route::get('orders/{order}/order','App\Http\Controllers\ProductController@order');
+    Route::get('session', 'App\Http\Controllers\ShoppingController@put')->name('session');
+    Route::get('getsession', 'App\Http\Controllers\ShoppingController@get')->name('getsession');
+    Route::get('delete', 'App\Http\Controllers\ShoppingController@delete')->name('delete');
     Route::resource('restaurants','App\Http\Controllers\RestaurantmanageController');
     });
 
@@ -48,10 +52,8 @@ Route::get('/info', function () {
  
 
 //  routes for session (shoppinbasket)
-Route::get('orders/{order}/order', '\App\Http\Controllers\ProductController@order');
-Route::get('session', 'App\Http\Controllers\ShoppingController@put')->name('session');
-Route::get('getsession', 'App\Http\Controllers\ShoppingController@get')->name('getsession');
-Route::get('delete', 'App\Http\Controllers\ShoppingController@delete')->name('delete');
+
+
 
 
 
