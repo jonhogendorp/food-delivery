@@ -16,7 +16,7 @@
 <p>{{ $message }}</p>
 </div>
 @endif
-<table class="table table-bordered" style="color: white">
+<table class="table table-bordered" style="color: black">
 <tr>
 <th>No</th>
 <th>Name</th>

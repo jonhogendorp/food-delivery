@@ -32,7 +32,7 @@
                             <li class="col-lg-10">
                                     <h4><a href="{{$result->path()}}">{{$result->restaurant_name}}</a></h4>
                                     <p>{{$result->restaurant_type}}</p>
-                                    <p>Döner, Turkse pizza, Italiaanse Pizza, Kapsalon</p>
+                                    <p>{{$result->times->start}}</p>
                             </li>
                     </div>
                 </div>

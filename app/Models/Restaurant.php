@@ -13,8 +13,8 @@ class Restaurant extends Model
 {
     use HasFactory;
 
-   
-    
+
+
 
     public function areas()
     {
@@ -28,11 +28,11 @@ class Restaurant extends Model
     {
         return route('restaurants.show', $this);
     }
-    
+
     public function times()
     {
         return $this->hasOne(Time::class, 'id');
-        
+
     }
 
     public function products(){
@@ -41,12 +41,16 @@ class Restaurant extends Model
 
     public function show(Restaurant $results)
     {
-       
+
         return view('restaurants.show', ['results' => $results]);
 
     }
     protected $fillable = [
         'restaurant_name', 'email', 'street',  'house_number',  'house_number_addition',  'postal_code', 'city', 'phone',
     ];
+    protected $attributes = [
+        'time_id' => 1, 'restaurant_type_id' => 2,
+    ];
+
 
 }

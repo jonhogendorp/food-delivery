@@ -9,31 +9,25 @@ use Illuminate\Http\Request;
 class RestaurantController extends Controller
 {
 
-    public function testUser(Request $request)
-    {
-        dd($request->all());
-    }
 
-    public function index(){
-        return view('restaurant', []);
-    }
 
-    
+
+
     public function show(Restaurant $restaurant){
-
-        
-
-
 
         return view('restaurants.show', ['restaurant' => $restaurant]);
     }
 
-public function showAll()
+public function index()
 {
 $restaurants = Restaurant::latest()->paginate(5);
 return view('restaurant',compact('restaurants'))
 ->with('i', (request()->input('page', 1) - 1) * 5);
 }
+// public function testUser(Request $request)
+//     {
+//         dd($request->all());
+//     }
 
 }
 // ['restaurant'=> $result]

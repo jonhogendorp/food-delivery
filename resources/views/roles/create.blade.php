@@ -21,7 +21,7 @@
 </div>
 @endif
 {!! Form::open(array('route' => 'roles.store','method'=>'POST')) !!}
-<div class="row">
+<div class="row" style="color: black">
 <div class="col-xs-12 col-sm-12 col-md-12">
 <div class="form-group">
 <strong>Name:</strong>

@@ -17,7 +17,7 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('food_type_id')->nullable();
-          
+
             $table->string('food_name');
             $table->unsignedBigInteger('restaurant_id')->unsigned()->nullable();
 
@@ -31,7 +31,8 @@ class CreateProductsTable extends Migration
 
             $table->foreign('restaurant_id')
             ->references('id')
-            ->on('restaurants');
+            ->on('restaurants')
+            ->onDelete('cascade');
 
         });
     }

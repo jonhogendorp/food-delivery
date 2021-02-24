@@ -11,7 +11,7 @@
 </div>
 </div>
 </div>
-<div class="row" style="padding: 100px">
+<div class="row" style="padding: 100px; color:black">
 <div class="col-xs-12 col-sm-12 col-md-12" >
 <div class="form-group">
 <strong>First Name:</strong>

@@ -16,12 +16,12 @@
 
         @auth
         @can('role-list')
-        <li><a href="roles">Roles Manage</a></li>
-        <li><a href="users">Users Manage</a></li>
+        <li><a href="/roles">Roles Manage</a></li>
+        <li><a href="/users">Users Manage</a></li>
         @endcan
         @can('product-create')
-        <li><a href="products">Products Manage</a></li>
-        <li><a href="restaurants">Restaurants Manage</a></li>
+        <li><a href="/products">Products Manage</a></li>
+        <li><a href="/restaurants">Restaurants Manage</a></li>
         @endcan
         @endauth
 
