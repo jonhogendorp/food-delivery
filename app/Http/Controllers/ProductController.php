@@ -110,16 +110,6 @@ public function destroy(Product $product){
 * @param  \App\Product  $product
 * @return \Illuminate\Http\Response
 */
-public function order($id){
-
-    $products = Product::find($id)->with('restaurants:id,restaurant_name')->get();
-    
-    $product =  $products->find($id);
-   
-    
-   return view('orders.order',compact('product'));
-}
-
 
 }
 

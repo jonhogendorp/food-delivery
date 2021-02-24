@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Redirect;
-
+use App\Models\Product;
 class ShoppingController extends Controller
 {
         public function put(Request $request){
@@ -71,6 +71,16 @@ class ShoppingController extends Controller
     public function delete(){
         session()->forget('order');
         header('Location: /home');
+    }
+
+    public function order($id){
+
+        $products = Product::find($id)->with('restaurants:id,restaurant_name')->get();
+        
+        $product =  $products->find($id);
+       
+        
+       return view('orders.order',compact('product'));
     }
 
     
