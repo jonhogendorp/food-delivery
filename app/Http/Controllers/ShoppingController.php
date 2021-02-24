@@ -14,13 +14,14 @@ class ShoppingController extends Controller
         $restaurant = $request->input('restaurant');
         $product = $request->input('product');
         $size = $request->input('size');
-        $price = $request->input('price');
-        $quantity = $request->input('quantity');
+        $price = floatval($request->input('price'));
+        $quantity = floatval($request->input('quantity'));
+        $totalprice = $price*$quantity;
+       
         
+       
 
-        
-    
-       session()->put('order', ['restaurant' => $restaurant, 'product' => $product, 'size' => $size, 'price' => $price, 'quantity' => $quantity]);
+       session()->put('order', ['restaurant' => $restaurant, 'product' => $product, 'size' => $size, 'price' => $price, 'quantity' => $quantity, 'totalprice' => $totalprice]);
        header('Location: getsession');
        
         
@@ -34,7 +35,7 @@ class ShoppingController extends Controller
 
     public function delete(){
         session()->forget('name');
-        header('Location: getsession');
+        header('Location: /home');
     }
 
     

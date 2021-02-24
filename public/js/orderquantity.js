@@ -2,18 +2,19 @@
 /*!***************************************!*\
   !*** ./resources/js/orderquantity.js ***!
   \***************************************/
-var minusButton = document.getElementById('minus');
-var plusButton = document.getElementById('plus');
-var inputField = document.getElementById('quantity');
-minusButton.addEventListener('click', function (event) {
-  event.preventDefault();
-  var currentValue = Number(inputField.value) || 0;
-  inputField.value = currentValue - 1;
-});
-plusButton.addEventListener('click', function (event) {
-  event.preventDefault();
-  var currentValue = Number(inputField.value) || 0;
-  inputField.value = currentValue + 1;
-});
+var count = 1;
+var countEl = document.getElementById("count");
+
+function plus() {
+  count++;
+  countEl.value = count;
+}
+
+function minus() {
+  if (count > 1) {
+    count--;
+    countEl.value = count;
+  }
+}
 /******/ })()
 ;

@@ -23,11 +23,11 @@
         <label for="price"></label>
         <input type="text" class="price" name="price" id="price" value="{{$product->price}}" style="display: none;" required>
         </div>
-        <div>
-        <button id="minus">−</button>
-          <input type="number" value="1" class="quantity" name="quantity" id="quantity"/>
-          <button id="plus">+</button>
-        </div>
+        <div id="input_div">
+          <input type="number" value="1" name="quantity" id="quantity" max="25">
+          
+      </div>
+      
       </div>
     
     <button class="button is-link" type="submit">Confirm</button>
