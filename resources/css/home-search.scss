@@ -6,7 +6,7 @@
     height: 100vh;
     background: url('../img/burger-fries.jpg') top center ;
     background-size: cover;
-    position: relative;
+    position:relative;
     padding: 0;
   }
 
@@ -52,7 +52,7 @@
   }
 
   #home-search .search-function button, #home-search .search-function input{
-    box-shadow:1px 1px 5px rgba(0, 0, 0, 0.4) ;
+    box-shadow:1px 1px 5px rgba(0, 0, 0, 0.2) ;
 
   }
 
@@ -62,20 +62,20 @@
     font-weight: 700;
     line-height: 56px;
     color: #fff;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
     font-family: "Poppins", sans-serif;
   }
 
   #home-search h1 span {
     color: #0CBE57;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4)
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2)
   }
 
   #home-search h2 {
     color: white;
     margin-bottom: 10px 0 0 0;
     font-size: 22px;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4)
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2)
   }
 
   #home-search .btns {

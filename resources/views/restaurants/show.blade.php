@@ -1,9 +1,9 @@
 @extends('layout')
   @section('content')
- 
+
   <section id="image-header-show-restaurant">
   </section>
-  <section id="restaurant-detail" class="restaurant-detail">
+    <section id="restaurant-detail" class="restaurant-detail">
 
       <div class="restaurant-about">
           <h4>{{$restaurant->restaurant_name}}</h4>
@@ -13,8 +13,8 @@
   <div class="container" data-aos="fade-up">
       <div class="row">
           @foreach ($restaurant->products as $product)
-       
-         
+
+
           <div class=" col-lg-12" data-aos="zoom-in" data-aos-delay="100" >
               <div class="box" data-aos="zoom-in" data-aos-delay="100">
                       <li class="col-lg-2 img">
@@ -27,7 +27,7 @@
                           <p>{{$product->price}}</p>
                           <p>ingredients</p>
                           <p><a href="/orders/{{$product->id }}/order" class="button is-link"> Order Me </a></p>
-                          
+
                       </li>
               </div>
           </div>
@@ -35,14 +35,8 @@
       </div>
   </div>
   </section>
-  <div id="order" class="overlay">
 
-    
-  
-  </div>
-    
-  
   @endsection
 
 
-  
+
