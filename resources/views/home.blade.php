@@ -15,7 +15,7 @@
             @csrf
             <div>
             <input type="text" class="customerPostalCode" name="customerPostalCode" id="customerPostalCode" value="9712AX" required>
-            <button class="button" type="submit"><span>Go</span></button>
+            <button class="button" type="submit"><span>Search</span></button>
             <p>{{$errors->first('customerPostalCode')}}</p>
             </div>
           </form>

@@ -1,10 +1,9 @@
 @extends('layout')
     @section('content')
-    {{-- <section class="d-flex align-items-center">
-    </section> --}}
     <section id="image-header-show-restaurant">
     </section>
     <section id="restaurant-detail" class="restaurant-detail">
+
         {{-- about gedeelte --}}
         <div class="restaurant-about">
             <h4>{{$results->restaurant_name}}</h4>
@@ -12,19 +11,11 @@
         </div>
 
     <div class="container" data-aos="fade-up">
+
         {{-- populaire gerechten  --}}
         <div class="row">
             @foreach ($results as $product)
-            {{-- <div class="col-lg-12">
-                <div class="box row" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="col-lg-10">
 
-                        <h3>name product</h3>
-                        <p>ingredienten</p>
-                        <p>price</p>
-                    </div>
-                </div>
-            </div> --}}
             <div class=" col-lg-12" data-aos="zoom-in" data-aos-delay="100" >
                 <div class="box" data-aos="zoom-in" data-aos-delay="100">
                         <li class="col-lg-2 img">
@@ -67,23 +58,23 @@
           <h4>Price:</h4>
           <p>{{$product->price}}</p>
           <br>
-          
+
           <button onclick="openNav()" class="button is-link">Order</button>
         </div>
       </div>
-    </div>  
-    
+    </div>
+
       @endforeach
   </div>
 
-      
+
   </section>
 
 </section>
 <div id="order" class="overlay">
 
   <!-- Button to close the overlay navigation -->
-  
+
 
   <!-- Overlay content -->
   <div class="overlay-content">
@@ -110,15 +101,15 @@
         <p>{{$errors->first('product')}}{{$errors->first('size')}}{{$errors->first('price')}}</p>
         </div>
       </div>
-    
+
     <button class="button is-link" type="submit">Confirm</button>
     <button onclick="closeNav()" class="button is-link">Close</button>
   </form>
-  
+
   </div>
 
 </div>
- 
+
 
 @endsection
 @section('content')

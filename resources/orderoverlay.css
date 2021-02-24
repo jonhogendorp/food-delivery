@@ -2,14 +2,14 @@
   margin: auto;
   position: relative;
  }
- 
+
 .product, .size, .price, input, select{
   font-family: "Helvetica", sans-serif;
   width : 400px;
   height: 40px;
   padding: 0;
   margin: 10px;
-  box-sizing: border-box;  
+  box-sizing: border-box;
  }
 
  .restauranttitle, .ordertitle{
@@ -17,10 +17,10 @@
   color: #0CBE57;
  }
 
- 
+
 
 .overlay {
-  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
   height: 100%;
   width: 0;
   position: fixed; /* Stay in place */
