@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+
 
 
 class ShoppingController extends Controller
@@ -36,4 +36,6 @@ class ShoppingController extends Controller
         session()->forget('name');
         header('Location: getsession');
     }
+
+    
 }

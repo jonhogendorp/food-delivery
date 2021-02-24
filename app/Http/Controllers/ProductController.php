@@ -69,9 +69,8 @@ return view('products.show',compact('product'));
 * @param  \App\Product  $product
 * @return \Illuminate\Http\Response
 */
-public function edit(Product $product)
-{
-return view('products.edit',compact('product'));
+public function edit(Product $product){
+    return view('products.edit',compact('product'));
 }
 /**
 * Update the specified resource in storage.
@@ -80,16 +79,15 @@ return view('products.edit',compact('product'));
 * @param  \App\Product  $product
 * @return \Illuminate\Http\Response
 */
-public function update(Request $request, Product $product)
-{
-request()->validate([
+public function update(Request $request, Product $product){
+    request()->validate([
     'food_name' => 'required',
     'size' => 'required',
     'price' => 'required',
-]);
-$product->update($request->all());
-return redirect()->route('products.index')
-->with('success','Product updated successfully');
+    ]);
+    $product->update($request->all());
+    return redirect()->route('products.index')
+    ->with('success','Product updated successfully');
 }
 /**
 * Remove the specified resource from storage.
@@ -97,10 +95,29 @@ return redirect()->route('products.index')
 * @param  \App\Product  $product
 * @return \Illuminate\Http\Response
 */
-public function destroy(Product $product)
-{
-$product->delete();
-return redirect()->route('products.index')
-->with('success','Product deleted successfully');
+
+public function destroy(Product $product){
+    $product->delete();
+    return redirect()->route('products.index')
+    ->with('success','Product deleted successfully');
 }
+
+/**
+* Display the specified resource.
+*
+* @param  \App\Product  $product
+* @return \Illuminate\Http\Response
+*/
+public function order($id){
+
+    $products = Product::find($id)->with('restaurants:id,restaurant_name')->get();
+    
+    $product =  $products->find($id);
+   
+    
+   return view('orders.order',compact('product'));
 }
+
+
+}
+
