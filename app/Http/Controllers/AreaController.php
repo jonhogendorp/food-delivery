@@ -29,13 +29,15 @@ class AreaController extends Controller
             $q->where('area','=', $customerRegion);
             })->get();
 
+            $now = carbon::now()->format("H:i:s");
+
             foreach($results as $result){
-                if($result->times->start < carbon::now()->toTimeString()){
-                    $result->times->start = 'Open untill '.$result->times->stop."";
+                if($result->times->stop <= $now){
+                    $result->times->start = 'Closed untill '.$result->times->start."";
 
                 }
                 else{
-                    $result->times->start = 'Closed untill '.$result->times->start."";
+                    $result->times->start = 'Open untill '.$result->times->stop."";
                 }
 
             }
