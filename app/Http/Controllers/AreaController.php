@@ -28,16 +28,18 @@ class AreaController extends Controller
         $results = Restaurant::with('times:id,start,stop')->whereHas('areas', function($q) use ($customerRegion) {
             $q->where('area','=', $customerRegion);
             })->get();
+            
 
             $now = carbon::now()->format("H:i:s");
-
+           ;
             foreach($results as $result){
-                if($result->times->stop <= $now){
-                    $result->times->start = 'Closed untill '.$result->times->start."";
+
+                if($result->times->start <= $now){
+                    $result->times->start = 'Open untill '.$result->times->stop."";
 
                 }
-                else{
-                    $result->times->start = 'Open untill '.$result->times->stop."";
+                else if ($result->times->start >= $now){
+                    $result->times->start = 'Closed untill '.$result->times->start."";
                 }
 
             }

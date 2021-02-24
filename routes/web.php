@@ -35,6 +35,8 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('session', 'App\Http\Controllers\ShoppingController@put')->name('session');
     Route::get('getsession', 'App\Http\Controllers\ShoppingController@get')->name('getsession');
     Route::get('delete', 'App\Http\Controllers\ShoppingController@delete')->name('delete');
+    Route::get('show', 'App\Http\Controllers\ShoppingController@show')->name('show');
+    Route::get('orders.order', 'App\Http\Controllers\ShoppingController@purchase')->name('order');
     });
 
 Route::get('/info', function () {
@@ -48,4 +50,7 @@ Route::get('/info', function () {
  Route::post('/search', 'App\Http\Controllers\AreaController@index')->name('searchresults');
  Route::get('/restaurants/{show}', '\App\Http\Controllers\RestaurantController@show')->name('restaurants.show');
  Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
+ Route::get('test', function() { return view('testurl');});
 
+
+ 

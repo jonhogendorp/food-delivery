@@ -31,8 +31,8 @@ class CreateProductsTable extends Migration
 
             $table->foreign('restaurant_id')
             ->references('id')
-            ->on('restaurants')
-            ->onDelete('cascade');
+            ->on('restaurants');
+            //Oncascade delete verwijderd- Anders verwijder je het restaurant als je het product verwijderd.
 
         });
     }
