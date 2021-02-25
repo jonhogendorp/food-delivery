@@ -24,7 +24,8 @@ $this->middleware('permission:product-delete', ['only' => ['destroy']]);
 */
 public function index()
 {
-$products = Product::latest()->paginate(5);
+$products = Product::latest()->paginate(20);
+$products = Product::with('restaurants')->get();
 return view('products.index',compact('products'))
 ->with('i', (request()->input('page', 1) - 1) * 5);
 }

@@ -31,7 +31,7 @@
                     <th>Food Name</th>
                     <th>Size</th>
                     <th>Price</th>
-                    <th >Action</th>
+                    <th >Restaurant</th>
                 </tr>
                 @foreach ($products as $key => $product)
                 <tr>
@@ -39,6 +39,7 @@
                 <td>{{ $product->food_name }}</td>
                 <td>{{ $product->size }}</td>
                 <td>{{ $product->price }}</td>
+                <td>{{ $product->restaurants->restaurant_name }}</td>
                 <td>
                 {{-- @if(!empty($product->getRoleNames()))
                 @foreach($product->getRoleNames() as $v)
