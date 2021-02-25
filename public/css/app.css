@@ -11915,8 +11915,29 @@ h1 .logo {
     opacity: 0;
   }
 }
-#restaurant-detail .row .box h3 {
+#restaurant-detail .row .box h5 {
   color: black;
+}
+
+#restaurant-detail .restaurant-about h3 {
+  color: black;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+#restaurant-detail .restaurant-about {
+  padding-left: 15px;
+}
+
+#restaurant-detail .box .order-button {
+  background-color: #0CBE57;
+  border: 0.5px solid #0aae4f;
+  margin-top: 10px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+#restaurant-detail .box .order-button .is-link {
+  color: white;
 }
 
 #image-header-show-restaurant {
@@ -12036,4 +12057,108 @@ h1 .logo {
 
 #register .card-body .col-md-4 {
   color: black;
+}
+
+#product-table {
+  padding-top: 0;
+}
+
+#product-table .table .table-bordered {
+  color: black;
+  border: solid 1px black;
+  border-radius: 1em;
+}
+
+#create-product .btn-success {
+  background-color: #0CBE57;
+  color: white;
+}
+
+#create-product .btn-success:hover {
+  background-color: #0cbe56d1;
+}
+
+#create-product .btn-success a {
+  color: white;
+}
+
+#create-product .btn-success a:hover {
+  color: #f1f1f1;
+}
+
+#product-table .btn-info {
+  background-color: #0CBE57;
+  color: white;
+}
+
+#product-table .table .delete {
+  display: inline;
+}
+
+#show-product-spec {
+  color: black;
+}
+
+#show-product-spec .show-text {
+  color: black;
+}
+
+#show-product .container {
+  margin-top: 100px;
+}
+
+#show-product .btn-primary {
+  margin-bottom: 10px;
+}
+
+#show-product .btn-primary a {
+  color: white;
+}
+
+#show-product h2 {
+  color: black;
+  font-weight: 700;
+}
+
+#product-detail h4 {
+  color: black;
+}
+
+#product-detail .product-info .show-text {
+  font-weight: 700;
+}
+
+#show-product #product-detail {
+  padding-top: 20px;
+}
+
+#edit-product h2 {
+  color: black;
+}
+
+#edit-product-form .edit-product-tag {
+  color: black;
+  font-weight: 700;
+}
+
+#create-product h2 {
+  color: black;
+}
+
+#create-product .add-product-tag {
+  font-weight: 700;
+  color: black;
+}
+
+.back-button {
+  margin: 10px 0;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.back-button a {
+  color: white;
+}
+
+.back-button a:hover {
+  color: whitesmoke;
 }
