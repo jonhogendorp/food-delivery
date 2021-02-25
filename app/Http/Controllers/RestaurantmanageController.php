@@ -58,7 +58,7 @@ public function store(Request $request)
         'start' => 'required',
         'stop' => 'required',
         ]);
-//fills out Restautant table first with input fields
+//saves inputfield (except start and stop) to DB Restaurant table first
 Restaurant::create($request->all());
 
 //get postalcode to areas table and save to DB    
@@ -71,11 +71,11 @@ $stop = $request->input('stop');
 DB::table('times')->insert(array('stop' => $stop, 'start' => $start));
 
 
-//get ID from added area row 
+//get area id from added row in area table 
 $areaIdCollection = DB::table('areas')->where('area', $area)->get();
 $areaID = $areaIdCollection[0]->id;
 
-// Get Id from added restaurant based on name and add it to the area_restuarant table. Also gets the area id and saves it to area_restaurant to link restaurant to area 
+// Get Id from added restaurant table row, based on name and add it to the area_restuarant table together with the area ID. 
 $restaurantname = $request->input('restaurant_name');
 $restaurantID = DB::table('restaurants')->where('restaurant_name', $restaurantname)->pluck('id');
 $restaurantid = $restaurantID->get(0);

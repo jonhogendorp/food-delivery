@@ -32,8 +32,8 @@
                                     echo($totalprice);}?>
                                 </p>
                                 <p>
-                                    <button class="button" onclick="window.open('/orders.confirm')"><span>Confirm Order</span></button>
-                                    <button class="button" onclick="window.open('/orders.show')"><span>Show Basket</span></button>
+                                    <button class="button" onclick="window.open('/orders.confirm')" target="_blank"><span>Confirm Order</span></button>
+                                    <button class="button" onclick="window.open('/orders.show')" target="_blank"><span>Show Basket</span></button>
                                 </p>
                             </li>
                     </div>
@@ -62,12 +62,12 @@
                           <h5>{{$product->food_name}}</h4>
                           <p>{{$product->price}}</p>
                           <p>ingredients</p>
-                          <p><button class="button"><span onclick="openNav()">open</span></button></p>
+                          
                           
 
                           {{-- <p>ingredients</p> --}}
                         <button class="btn btn-primary order-button">
-                            <a href="/orders/{{$product->id }}/order" class="is-link"> Order Me </a>
+                            <a href="/orders/{{$product->id }}/order" class="is-link" target="_blank"> Order Me </a>
                         </button>
                       </li>
               </div>
@@ -113,7 +113,6 @@
    
     </div>
   
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
   @endsection
 
