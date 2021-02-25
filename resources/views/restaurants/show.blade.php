@@ -17,19 +17,22 @@
                                     </svg>
                             </li>
                             <li class="col-lg-10">
-                            </strong>Your Order</strong>
+                            </strong>Your shopping Basket:</strong>
                                 <p>Products: <?php
+                                    if(session_id() == 'order' || !isset($_SESSION)){
                                     $quantity = session()->get('order');
-                                    echo(sizeof($quantity));?>
+                                    $totalAmount = array_sum(array_column($quantity, 'quantity'));
+                                    echo($totalAmount);}?>
                                 </p>
                                 <p>Total Price: €<?php 
+                                    if(session_id() == 'order' || !isset($_SESSION)){
                                     $order = session()->get('order');
                                     $totalprice = array_sum(array_column($order, 'productTotalPrice'));
-                                    echo($totalprice);?>
+                                    echo($totalprice);}?>
                                 </p>
                                 <p>
                                     <button class="button" onclick="window.location.href='/orders.confirm'"><span>Confirm Order</span></button>
-                                    
+                                    <button class="button" onclick="window.location.href='/orders.show'"><span>Show Basket</span></button>
                                 </p>
                             </li>
                     </div>
