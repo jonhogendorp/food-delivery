@@ -16,6 +16,7 @@
         <div>
         <label for="price"></label>
         <input type="text" class="price" name="price" id="price" value="{{$product->price}}" style="display: none;" required>
+        <p>Price: {{$product->price}}</p>
         </div>
         <div id="input_div">
           <input type="number" value="1" name="quantity" id="quantity" max="25">
