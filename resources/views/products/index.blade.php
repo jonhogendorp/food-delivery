@@ -48,14 +48,15 @@
                 </td>
                 <td>
                         <a class="btn btn-info" href="{{ route('products.show',$product->id) }}">Show</a>
-                        @hasanyrole('Restaurant_Owner|Admin')
+                        @can('product-edit')
+
 
                         <a class="btn btn-primary" href="{{ route('products.edit',$product->id) }}">Edit</a>
 
                         {!! Form::open(['method' => 'DELETE','route' => ['products.destroy', $product->id],'class' => 'delete']) !!}
                         {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
                         {!! Form::close() !!}
-                        @endhasrole
+@endcan
                         </td>
                         </tr>
                         @endforeach

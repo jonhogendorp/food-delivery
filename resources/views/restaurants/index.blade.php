@@ -5,9 +5,11 @@
 <div class="pull-left">
 <h2>Restaurants Management</h2>
 </div>
+@can('restaurant-edit')
 <div class="pull-right">
 <a class="btn btn-success" href="{{ route('restaurants.create') }}"> Create New User</a>
 </div>
+@endcan
 </div>
 </div>
 @if ($message = Session::get('success'))
@@ -43,10 +45,12 @@
 
 <td>
 <a class="btn btn-info" href="{{ route('restaurants.show',$restaurant->id) }}">Show</a>
+@can('restaurant-edit')
 <a class="btn btn-primary" href="{{ route('restaurants.edit',$restaurant->id) }}">Edit</a>
 {!! Form::open(['method' => 'DELETE','route' => ['restaurants.destroy', $restaurant->id],'style'=>'display:inline']) !!}
 {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
 {!! Form::close() !!}
+@endcan
 </td>
 </tr>
 @endforeach
