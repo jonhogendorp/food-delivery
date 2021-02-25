@@ -19,15 +19,15 @@
                             <li class="col-lg-10">
                             </strong>Your shopping Basket:</strong>
                                 <p>Products: <?php
-                                    if(session_id() == 'order' || !isset($_SESSION)){
                                     $quantity = session()->get('order');
-                                    $totalAmount = array_sum(array_column($quantity, 'quantity'));
+                                    if($quantity == null){echo("0");}
+                                    else {$totalAmount = array_sum(array_column($quantity, 'quantity'));
                                     echo($totalAmount);}?>
                                 </p>
                                 <p>Total Price: €<?php 
-                                    if(session_id() == 'order' || !isset($_SESSION)){
                                     $order = session()->get('order');
-                                    $totalprice = array_sum(array_column($order, 'productTotalPrice'));
+                                    if($order == null){echo("0");}
+                                    else {$totalprice = array_sum(array_column($order, 'productTotalPrice'));
                                     echo($totalprice);}?>
                                 </p>
                                 <p>

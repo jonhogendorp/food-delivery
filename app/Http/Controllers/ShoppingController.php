@@ -57,10 +57,12 @@ class ShoppingController extends Controller
     public function purchase(Request $request)
 {
     
-    return view('orders.order');
+    return view('orders.purchase');
 
 }
     public function show(){
+
+        return view('orders.show');
 
     }
 
