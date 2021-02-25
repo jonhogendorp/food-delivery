@@ -20,10 +20,10 @@
 
   @include('layouts/partials/header')
 
-  
+
 
   <main id="main">
     @yield('content')
-  </main><!-- End #main -->  
+  </main><!-- End #main -->
 
   @include('layouts/partials/footer')

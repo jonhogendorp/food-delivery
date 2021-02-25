@@ -64,18 +64,6 @@
                           </li>
         @endguest
 
-
-
-
-
-        {{-- @guest
-        <li><a href="register">Register</a></li>
-        <li class="book-a-table text-center"><a href="login">Login</a></li>
-        @else
-        <a class="btn btn-link" href="{{ route('logout') }}">
-          {{ Auth::user()->first_name }}
-      </a>
-        @endguest --}}
       </ul>
     </nav><!-- .nav-menu -->
 

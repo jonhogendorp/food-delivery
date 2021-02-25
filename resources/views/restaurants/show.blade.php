@@ -7,9 +7,6 @@
     <section id="restaurant-detail" class="restaurant-detail">
         <div class="container" data-aos="fade-up">
             <div class="row">
-                
-      
-      
                 <div class=" col-lg-12" data-aos="zoom-in" data-aos-delay="100" >
                     <div class="box" data-aos="zoom-in" data-aos-delay="100">
                             <li class="col-lg-2 img">
@@ -25,7 +22,7 @@
                                     else {$totalAmount = array_sum(array_column($quantity, 'quantity'));
                                     echo($totalAmount);}?>
                                 </p>
-                                <p>Total Price: €<?php 
+                                <p>Total Price: €<?php
                                     $order = session()->get('order');
                                     if($order == null){echo("0");}
                                     else {$totalprice = array_sum(array_column($order, 'productTotalPrice'));
@@ -38,10 +35,10 @@
                             </li>
                     </div>
                 </div>
-              
+
             </div>
         </div>
-      
+
 
   <div class="container" data-aos="fade-up">
       <div class="row">
@@ -61,9 +58,9 @@
                       <li class="col-lg-10">
                           <h5>{{$product->food_name}}</h4>
                           <p>{{$product->price}}</p>
-                          <p>ingredients</p>
-                          <p><button class="button" onclick="window.open('/orders/{{$product->id }}/order')"><span>Order Me</span></button></p>
-                          
+
+                          <p><button class="button btn order-button" onclick="window.open('/orders/{{$product->id }}/order')">Order Me</button></p>
+
 
                           {{-- <p>ingredients</p> --}}
                         <button class="btn btn-primary order-button">
