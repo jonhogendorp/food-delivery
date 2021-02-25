@@ -118,11 +118,12 @@ request()->validate([
     'email' => 'required',
     'street' => 'required',
     'house_number' => 'required',
-    'house_number_addition' => 'required',
     'postal_code' => 'required',
     'city' => 'required',
     'phone' => 'required',
 ]);
+
+
 $restaurant->update($request->all());
 return redirect()->route('restaurants.index')
 ->with('success','restaurant updated successfully');
