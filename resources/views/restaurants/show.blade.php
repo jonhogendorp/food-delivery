@@ -20,7 +20,7 @@
                             <li class="col-lg-10">
                             </strong>Your shopping Basket:</strong>
                                 <p>Products: <?php
-                                    $quantity = session()->get('order');
+                                    $quantity = session()->get('order'
                                     if($quantity == null){echo("0");}
                                     else {$totalAmount = array_sum(array_column($quantity, 'quantity'));
                                     echo($totalAmount);}?>
@@ -77,41 +77,7 @@
   </div>
   </section>
 
-  <div id="myNav" class="overlay">
-
-    <!-- Button to close the overlay navigation -->
-    
   
-    <!-- Overlay content -->
-    <div class="overlay-content">
-        <h1>{{$product->restaurants->restaurant_name}}</h1>
-        <h2 class="ordertitle">Your order:</h2>
-        <h3>{{$product->food_name}}</h3>
-        <form method="GET" action="{{route('session')}}" class="orderoverlay" id="orderoverlay" name="orderoverlay">
-          @csrf
-          <div>
-            <label for="Restaurant"></label>
-          <input type="text" class="restaurant" name="restaurant" id="restaurant" value="{{$product->restaurants->restaurant_name}}" style="display: none;" required>
-          </div>
-          <div>
-              <label for="Product"></label>
-            <input type="text" class="product" name="product" id="product" value="{{$product->food_name}}" style="display: none;" required>
-            </div>
-            <div>
-            <label for="price">Price: {{$product->price}}</label>
-            <input type="text" class="price" name="price" id="price" value="{{$product->price}}" style="display: none;" required>
-            </div>
-            <div id="div">
-            <label for="quantity"></label>
-              <input type="number" value="1" name="quantity" id="quantity" max="25">
-            </div>
-        <br>
-        <br>
-            <p><button class="button is-link" type="submit">Confirm</button></p>
-            
-      </form>
-   
-    </div>
   
 
   @endsection

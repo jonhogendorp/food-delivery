@@ -26,4 +26,6 @@
       </div>
     
     <button class="button is-link" type="submit">Confirm</button>
+    <button type="button" onclick="window.open('', '_self', ''); window.close();">Cancel</button>
+
   </form>
