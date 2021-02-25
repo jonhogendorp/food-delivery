@@ -31,8 +31,8 @@
                                     echo($totalprice);}?>
                                 </p>
                                 <p>
-                                    <button class="button" onclick="window.location.href='/orders.confirm'"><span>Confirm Order</span></button>
-                                    <button class="button" onclick="window.location.href='/orders.show'"><span>Show Basket</span></button>
+                                    <button class="button" onclick="window.open('/orders.confirm')"><span>Confirm Order</span></button>
+                                    <button class="button" onclick="window.open('/orders.show')"><span>Show Basket</span></button>
                                 </p>
                             </li>
                     </div>
@@ -58,7 +58,7 @@
                           <h3>{{$product->food_name}}</h3>
                           <p>{{$product->price}}</p>
                           <p>ingredients</p>
-                          <p><button class="button" onclick="window.location.href='/orders/{{$product->id }}/order'"><span>Order Me</span></button></p>
+                          <p><button class="button" onclick="window.open('/orders/{{$product->id }}/order')"><span>Order Me</span></button></p>
                           
 
                       </li>
