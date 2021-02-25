@@ -10,7 +10,6 @@ class ShoppingController extends Controller
 
     $restaurant = $request->input('restaurant');
     $product = $request->input('product');
-    $size = $request->input('size');
     $price = floatval($request->input('price'));
     $quantity = floatval($request->input('quantity'));
     $productTotalPrice = $price*$quantity;
@@ -19,14 +18,14 @@ class ShoppingController extends Controller
     
     
     if($request->session()->has('order')){
-    session()->push('order', ['restaurant' => $restaurant, 'product' => $product, 'size' => $size, 'price' => $price, 'quantity' => $quantity, 'productTotalPrice' => $productTotalPrice]);
+    session()->push('order', ['restaurant' => $restaurant, 'product' => $product, 'price' => $price, 'quantity' => $quantity, 'productTotalPrice' => $productTotalPrice]);
 
     header('Location: restaurants/'.$url);
     }
     
     else{
     $_SESSION['order'] = array();    
-    session()->push('order', ['restaurant' => $restaurant, 'product' => $product, 'size' => $size, 'price' => $price, 'quantity' => $quantity, 'productTotalPrice' => $productTotalPrice]);
+    session()->push('order', ['restaurant' => $restaurant, 'product' => $product, 'price' => $price, 'quantity' => $quantity, 'productTotalPrice' => $productTotalPrice]);
 
     header('Location: restaurants/'.$url);
     }
