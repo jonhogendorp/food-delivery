@@ -2,16 +2,17 @@
   @section('content')
 
   <section id="image-header-show-restaurant">
+
   </section>
     <section id="restaurant-detail" class="restaurant-detail">
 
-      <div class="restaurant-about">
-          <h4>{{$restaurant->restaurant_name}}</h4>
-          <p></p>
-      </div>
+
 
   <div class="container" data-aos="fade-up">
       <div class="row">
+        <div class="restaurant-about">
+            <h3>{{$restaurant->restaurant_name}}</h3>
+        </div>
           @foreach ($restaurant->products as $product)
 
 
@@ -23,11 +24,12 @@
                               </svg>
                       </li>
                       <li class="col-lg-10">
-                          <h3>{{$product->food_name}}</h3>
+                          <h5>{{$product->food_name}}</h4>
                           <p>{{$product->price}}</p>
-                          <p>ingredients</p>
-                          <p><a href="/orders/{{$product->id }}/order" class="button is-link"> Order Me </a></p>
-
+                          {{-- <p>ingredients</p> --}}
+                        <button class="btn btn-primary order-button">
+                            <a href="/orders/{{$product->id }}/order" class="is-link"> Order Me </a>
+                        </button>
                       </li>
               </div>
           </div>
