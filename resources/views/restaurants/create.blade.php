@@ -30,49 +30,56 @@
 </div>
 </div>
 <div class="col-xs-12 col-sm-12 col-md-12">
+<div class="form-group">
+<strong>Restaurant Email:</strong>
+<input type="email" name="email" class="form-control" placeholder="email">
+</div>
+</div>
+
+
+<div class="col-xs-12 col-sm-12 col-md-12">
     <div class="form-group">
-    <strong>Restaurant Email:</strong>
-    <input type="email" name="email" class="form-control" placeholder="email">
+    <strong>Restaurant street:</strong>
+    <input type="text" name="street" class="form-control" placeholder="street">
     </div>
     </div>
-
-
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-        <strong>Restaurant street:</strong>
-        <input type="text" name="street" class="form-control" placeholder="street">
+        <strong>Restaurant House number:</strong>
+        <input type="text" name="house_number" class="form-control" placeholder="house_number">
         </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-            <strong>Restaurant House number:</strong>
-            <input type="text" name="house_number" class="form-control" placeholder="house_number">
+            <strong>Restaurant House number addition:</strong>
+            <input type="text" name="house_number_addition" class="form-control" placeholder="house_number_addition">
+        </div>
+    </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+            <strong>Restaurant postal code:</strong>
+            <input type="text" name="postal_code" class="form-control" placeholder="postal_code">
             </div>
-            </div>
+        </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                <strong>Restaurant House number addition:</strong>
-                <input type="text" name="house_number_addition" class="form-control" placeholder="house_number_addition">
-                </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                    <strong>Restaurant postal code:</strong>
-                    <input type="text" name="postal_code" class="form-control" placeholder="postal_code">
-                    </div>
-                    </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12">
-                            <div class="form-group">
-                            <strong>Restaurant city:</strong>
-                            <input type="text" name="city" class="form-control" placeholder="city">
-                            </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-12 col-md-12">
-                                <div class="form-group">
-                                <strong>Restaurant phone number:</strong>
-                                <input type="text" name="phone" class="form-control" placeholder="phone">
-                                </div>
-                                </div>
+                <strong>Restaurant city:</strong>
+                <input type="text" name="city" class="form-control" placeholder="city">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Restaurant phone number:</strong>
+                <input type="text" name="phone" class="form-control" placeholder="phone">w
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Opening Hours:</strong>
+                <input type="text" name="start" class="form-control" placeholder="start"><input type="time" id="start" name="start" required>
+                <input type="text" name="stop" class="form-control" placeholder="stop"><input type="time" id="stop" name="stop" required>
+            </div>
+        </div>
 
 
 <div class="col-xs-12 col-sm-12 col-md-12 text-center">
@@ -80,5 +87,5 @@
 </div>
 </div>
 </form>
-<p class="text-center text-primary"><small>Tutorial by rscoder.com</small></p>
+
 @endsection

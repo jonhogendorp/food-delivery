@@ -28,9 +28,7 @@ class CreateRestaurantsTable extends Migration
             $table->string('phone', 15);
             $table->timestamps();
 
-            $table->foreign('restaurant_type_id')
-                ->references('id')
-                ->on('restaurant_types');
+            
 
             $table->foreign('time_id')
                 ->references('id')

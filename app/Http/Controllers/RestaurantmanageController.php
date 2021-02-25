@@ -2,6 +2,9 @@
 namespace App\Http\Controllers;
 use App\Models\Restaurant;
 use Illuminate\Http\Request;
+use App\Models\Area;
+use App\Models\Time;
+use Illuminate\Support\Facades\DB;
 class RestaurantmanageController extends Controller
 {
 /**
@@ -44,17 +47,40 @@ return view('restaurants.create');
 */
 public function store(Request $request)
 {
-request()->validate([
-'restaurant_name' => 'required',
-'email' => 'required',
-'street' => 'required',
-'house_number' => 'required',
-'house_number_addition' => 'required',
-'postal_code' => 'required',
-'city' => 'required',
-'phone' => 'required',
-]);
+    request()->validate([
+        'restaurant_name' => 'required',
+        'email' => 'required',
+        'street' => 'required',
+        'house_number' => 'required',
+        'postal_code' => 'required',
+        'city' => 'required',
+        'phone' => 'required',
+        'start' => 'required',
+        'stop' => 'required',
+        ]);
+//fills out Restautant table first with input fields
 Restaurant::create($request->all());
+
+//get postalcode to areas table and save to DB    
+$area = substr($request->input('postal_code'),0,2);
+DB::table('areas')->insert(array('area' => $area));
+
+//get times and save to DB
+$start = $request->input('start');
+$stop = $request->input('stop');
+DB::table('times')->insert(array('stop' => $stop, 'start' => $start));
+
+
+//get ID from added area row 
+$areaIdCollection = DB::table('areas')->where('area', $area)->get();
+$areaID = $areaIdCollection[0]->id;
+
+// Get Id from added restaurant based on name and add it to the area_restuarant table. Also gets the area id and saves it to area_restaurant to link restaurant to area 
+$restaurantname = $request->input('restaurant_name');
+$restaurantID = DB::table('restaurants')->where('restaurant_name', $restaurantname)->pluck('id');
+$restaurantid = $restaurantID->get(0);
+DB::table('area_restaurant')->insert(array('restaurant_id' => $restaurantid, 'area_id' => $areaID ));
+
 return redirect()->route('restaurants.index')
 ->with('success','Restaurant created successfully.');
 }

@@ -16,8 +16,8 @@ class AreaRestaurant extends Migration
         //   restaurant_postal_code
         Schema::create('area_restaurant', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('restaurant_id');
-            $table->unsignedBigInteger('area_id');
+            $table->unsignedBigInteger('restaurant_id')->nullable();
+            $table->unsignedBigInteger('area_id')->nullable();
             $table->unique(['restaurant_id', 'area_id']);
 
             $table->foreign('restaurant_id')->references('id')->on('restaurants');
