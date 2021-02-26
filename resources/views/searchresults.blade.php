@@ -1,5 +1,6 @@
 @extends('layout')
 @section('content')
+{{session()->forget('order')}}
 <!-- ======= content Section ======= -->
 {{-- <section class="d-flex align-items-center">
 </section> --}}

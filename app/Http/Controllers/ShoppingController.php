@@ -40,7 +40,7 @@ class ShoppingController extends Controller
 
     public function delete(){
     session()->forget('order');
-    header('Location: /home');
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
 }
 
     public function order($id){
@@ -56,7 +56,7 @@ class ShoppingController extends Controller
     public function purchase(Request $request)
 {
     
-    return view('orders.purchase');
+    return view('orders.confirm');
 
 }
     public function show(){

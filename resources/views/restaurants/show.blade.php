@@ -17,7 +17,7 @@
                             <li class="col-lg-10">
                             </strong>Your shopping Basket:</strong>
                                 <p>Products: <?php
-                                    $quantity = session()->get('order'
+                                    $quantity = session()->get('order');
                                     if($quantity == null){echo("0");}
                                     else {$totalAmount = array_sum(array_column($quantity, 'quantity'));
                                     echo($totalAmount);}?>
@@ -28,9 +28,15 @@
                                     else {$totalprice = array_sum(array_column($order, 'productTotalPrice'));
                                     echo($totalprice);}?>
                                 </p>
-                                <p>
-                                    <button class="button" onclick="window.open('/orders.confirm')" target="_blank"><span>Confirm Order</span></button>
-                                    <button class="button" onclick="window.open('/orders.show')" target="_blank"><span>Show Basket</span></button>
+                                <p><button class="btn btn-primary order-button">
+                                    <a href="/orders.confirm" class="is-link">Confirm</a>
+                                    </button>
+                                    <button class="btn btn-primary order-button">
+                                    <a href="/orders.show" class="is-link" target="_blank">View Basket</a>
+                                    </button>
+                                    <button class="btn btn-primary order-button">
+                                        <a href="/delete" class="is-link">Empty Basket</a>
+                                    </button>
                                 </p>
                             </li>
                     </div>
@@ -57,14 +63,14 @@
                       </li>
                       <li class="col-lg-10">
                           <h5>{{$product->food_name}}</h4>
-                          <p>{{$product->price}}</p>
+                          <p>€ {{$product->price}}</p>
 
-                          <p><button class="button btn order-button" onclick="window.open('/orders/{{$product->id }}/order')">Order Me</button></p>
+                          {{-- <p><button class="button btn order-button" onclick="window.open('/orders/{{$product->id }}/order')">Order Me</button></p> --}}
 
 
                           {{-- <p>ingredients</p> --}}
                         <button class="btn btn-primary order-button">
-                            <a href="/orders/{{$product->id }}/order" class="is-link" target="_blank"> Order Me </a>
+                            <a href="/orders/{{$product->id }}/order" class="is-link"> Order Me </a>
                         </button>
                       </li>
               </div>

@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-
+{{session()->forget('order')}}
 <section id="home-search" class="d-flex align-items-center">
   <div class="container position-relative text-center text-lg-left" data-aos="zoom-in" data-aos-delay="100">
     <div class="row">
