@@ -5,7 +5,8 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\DB;
-use hash;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Arr;
 
 class UserController extends Controller
 {
@@ -102,7 +103,7 @@ $input = $request->all();
 if(!empty($input['password'])){
 $input['password'] = Hash::make($input['password']);
 }else{
-    $input = array_except($input, array('password'));
+    $input = Arr::except($input, array('password'));
 }
 $user = User::find($id);
 $user->update($input);

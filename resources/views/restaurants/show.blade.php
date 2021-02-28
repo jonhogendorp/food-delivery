@@ -1,6 +1,8 @@
 @extends('layout')
   @section('content')
 
+
+
   <section id="image-header-show-restaurant">
 
   </section>

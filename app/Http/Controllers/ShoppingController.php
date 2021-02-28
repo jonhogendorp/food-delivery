@@ -61,6 +61,8 @@ class ShoppingController extends Controller
 }
     public function show(){
 
+      
+
         return view('orders.show');
 
     }
