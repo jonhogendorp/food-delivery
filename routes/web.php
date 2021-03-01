@@ -35,9 +35,11 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('session', 'App\Http\Controllers\ShoppingController@put')->name('session');
     Route::get('getsession', 'App\Http\Controllers\ShoppingController@get')->name('getsession');
     Route::get('delete', 'App\Http\Controllers\ShoppingController@delete')->name('delete');
-    Route::get('show', 'App\Http\Controllers\ShoppingController@show')->name('show');
-    Route::get('orders.order', 'App\Http\Controllers\ShoppingController@purchase')->name('order');
+    Route::get('orders.show', 'App\Http\Controllers\ShoppingController@show')->name('show');
+    Route::get('orders.confirm', 'App\Http\Controllers\ShoppingController@purchase')->name('purchase');
+    
     });
+ 
 
 Route::get('/info', function () {
     return view('info');

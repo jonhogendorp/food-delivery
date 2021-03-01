@@ -1,5 +1,6 @@
 @extends('layout')
 @section('content')
+{{session()->forget('order')}}
 <!-- ======= content Section ======= -->
 {{-- <section class="d-flex align-items-center">
 </section> --}}
@@ -37,18 +38,11 @@
                     </div>
                 </div>
 
-
-   
-
         @empty
           <div class="col-lg-12">
             <div class="box" data-aos="zoom-in" data-aos-delay="100">
               <span>No restaurants were found in your area.</span>
             </div>
-              
-
-
-           
           </div>
       @endforelse
 

@@ -16,8 +16,8 @@
                                         </svg>
                                 </li>
                                 <li class="col-lg-10">
-                                    <h4 class="order-restaurant"></h4>
-                                    <h4 class="order-restaurant">€ </h4>
+                                    <h4 class="order-restaurant">{{$product->restaurants->restaurant_name}}</h4>
+                                    <h4 class="order-restaurant">€ {{$product->price}}</h4>
                                     <h6 class="order-title">Your order:</h6>
                                     
 

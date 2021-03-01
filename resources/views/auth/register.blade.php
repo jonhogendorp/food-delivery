@@ -123,7 +123,7 @@
                             <label for="house_number_addition" class="col-md-4 col-form-label text-md-right" >{{ __('House Number Addition') }}</label>
 
                             <div class="col-md-6">
-                                <input id="house_number_addition" type="text" class="form-control @error('name') is-invalid @enderror" name="house_number_addition" value="{{ old('name') }}" required autocomplete="house_number_addition" autofocus>
+                                <input id="house_number_addition" type="text" class="form-control @error('name') is-invalid @enderror" name="house_number_addition" value="{{ old('name') }}"  autofocus>
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">

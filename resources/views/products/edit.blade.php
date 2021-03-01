@@ -59,6 +59,6 @@
                 </button>
             </div>
         </div>
-        {{-- <p class="text-center text-primary"><small>Tutorial by rscoder.com</small></p> --}}
+   
     </section>
 @endsection

@@ -51,7 +51,7 @@
 {!! $data->render() !!}
 @endcan
 @cannot('role-list')
-<h1>Sorry My friend you don't have a permission to see this page!!!</h1>
+<h1>You don't have permission to see this page!!!</h1>
 @endcannot
-<p class="text-center text-primary"><small>Tutorial by rscoder.com</small></p>
+
 @endsection
