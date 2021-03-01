@@ -24,4 +24,4 @@ $restaurants = Restaurant::latest()->paginate(5);
 return view('restaurant',compact('restaurants'))
 ->with('i', (request()->input('page', 1) - 1) * 5);
 }
-
+}
